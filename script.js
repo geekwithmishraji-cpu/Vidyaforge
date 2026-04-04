@@ -248,7 +248,7 @@ function submitForm(form, statusEl, fields) {
   if (btnText) btnText.textContent = 'Sending…';
   if (btn) btn.disabled = true;
 
- const SHEET_URL = 'https://script.google.com/macros/s/AKfycbwI0Cfy0ygumfFlzrVQzMX58Sj1ps27ykWxlLb3URi35txqhwCyZbhAlay-o57p_ZXbSA/exec';
+ const SHEET_URL = 'https://script.google.com/macros/s/AKfycbw-wFSCzme-XXP3FbzcsF4qatTa4cgGSpapypjbdiyJzznVvqXreTm5n-w8KvS8h5qpIQ/exec';
 
 fetch(SHEET_URL, {
   method: 'POST',
