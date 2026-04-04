@@ -248,23 +248,20 @@ function submitForm(form, statusEl, fields) {
   if (btnText) btnText.textContent = 'Sending…';
   if (btn) btn.disabled = true;
 
-  /*
-   * ─────────────────────────────────────────────────────
-   * CONNECT FORMSPREE (free, no backend):
-   * 1. Sign up at formspree.io
-   * 2. Get your form ID
-   * 3. Replace the setTimeout below with:
-   *
-   * fetch('https://formspree.io/f/YOUR_ID', {
-   *   method: 'POST',
-   *   headers: { 'Accept': 'application/json' },
-   *   body: new FormData(form)
-   * })
-   * .then(r => r.ok ? onSuccess() : onError())
-   * .catch(onError);
-   * ─────────────────────────────────────────────────────
-   */
-  setTimeout(() => { onSuccess(); }, 1000);
+ const SHEET_URL = 'https://script.google.com/macros/s/AKfycbwI0Cfy0ygumfFlzrVQzMX58Sj1ps27ykWxlLb3URi35txqhwCyZbhAlay-o57p_ZXbSA/exec';
+
+fetch(SHEET_URL, {
+  method: 'POST',
+  body: JSON.stringify({
+    name:    fields.name,
+    email:   fields.email,
+    type:    fields.type    || '',
+    message: fields.message
+  })
+})
+.then(r => r.json())
+.then(d => d.result === 'success' ? onSuccess() : onError())
+.catch(onError);
 
   function onSuccess() {
     form.reset();
