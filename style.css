@@ -1127,64 +1127,70 @@ select { font-family: inherit; }
   color: #5eead4; background: rgba(0,201,167,0.12); border-color: rgba(0,201,167,0.25);
 }
 
-/* Service Card 01: Website — Cyan · Blue · Purple · Amber */
-.services-grid .service-card:nth-child(1) .service-tags li:nth-child(1) {
-  color: #67e8f9; background: rgba(6,182,212,0.10); border-color: rgba(6,182,212,0.22);
+/* ----------------------------------------------------------------
+   SERVICE PILLS — uniform glass background, colored text only
+   Works in both dark and light mode
+---------------------------------------------------------------- */
+
+/* Glass base for ALL service pills — overrides the colored backgrounds */
+.services-grid .service-tags li {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.10);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
-.services-grid .service-card:nth-child(1) .service-tags li:nth-child(2) {
-  color: #93c5fd; background: rgba(59,130,246,0.10); border-color: rgba(59,130,246,0.22);
-}
-.services-grid .service-card:nth-child(1) .service-tags li:nth-child(3) {
-  color: #c4b5fd; background: rgba(167,139,250,0.10); border-color: rgba(167,139,250,0.22);
-}
-.services-grid .service-card:nth-child(1) .service-tags li:nth-child(4) {
-  color: #fcd34d; background: rgba(245,158,11,0.10); border-color: rgba(245,158,11,0.22);
+[data-theme="light"] .services-grid .service-tags li {
+  background: rgba(0,0,0,0.04);
+  border-color: rgba(0,0,0,0.09);
 }
 
-/* Service Card 02: Growth — Green · Purple · Orange · Cyan */
-.services-grid .service-card:nth-child(2) .service-tags li:nth-child(1) {
-  color: #6ee7b7; background: rgba(16,185,129,0.10); border-color: rgba(16,185,129,0.22);
-}
-.services-grid .service-card:nth-child(2) .service-tags li:nth-child(2) {
-  color: #c4b5fd; background: rgba(167,139,250,0.10); border-color: rgba(167,139,250,0.22);
-}
-.services-grid .service-card:nth-child(2) .service-tags li:nth-child(3) {
-  color: #fdba74; background: rgba(249,115,22,0.10); border-color: rgba(249,115,22,0.22);
-}
-.services-grid .service-card:nth-child(2) .service-tags li:nth-child(4) {
-  color: #67e8f9; background: rgba(6,182,212,0.10); border-color: rgba(6,182,212,0.22);
-}
+/* Card 01: Website — Cyan · Blue · Purple · Amber text */
+.services-grid .service-card:nth-child(1) .service-tags li:nth-child(1) { color: #22d3ee; }
+.services-grid .service-card:nth-child(1) .service-tags li:nth-child(2) { color: #818cf8; }
+.services-grid .service-card:nth-child(1) .service-tags li:nth-child(3) { color: #c084fc; }
+.services-grid .service-card:nth-child(1) .service-tags li:nth-child(4) { color: #fbbf24; }
 
-/* Service Card 03: Automation (featured) — Pink · Teal · Purple · Amber */
-.services-grid .service-card:nth-child(3) .service-tags li:nth-child(1) {
-  color: #f9a8d4; background: rgba(236,72,153,0.10); border-color: rgba(236,72,153,0.22);
-}
-.services-grid .service-card:nth-child(3) .service-tags li:nth-child(2) {
-  color: #5eead4; background: rgba(0,201,167,0.10); border-color: rgba(0,201,167,0.22);
-}
-.services-grid .service-card:nth-child(3) .service-tags li:nth-child(3) {
-  color: #c4b5fd; background: rgba(167,139,250,0.10); border-color: rgba(167,139,250,0.22);
-}
-.services-grid .service-card:nth-child(3) .service-tags li:nth-child(4) {
-  color: #fcd34d; background: rgba(245,158,11,0.10); border-color: rgba(245,158,11,0.22);
-}
+/* Card 02: Growth — Green · Purple · Orange · Cyan text */
+.services-grid .service-card:nth-child(2) .service-tags li:nth-child(1) { color: #34d399; }
+.services-grid .service-card:nth-child(2) .service-tags li:nth-child(2) { color: #a78bfa; }
+.services-grid .service-card:nth-child(2) .service-tags li:nth-child(3) { color: #fb923c; }
+.services-grid .service-card:nth-child(2) .service-tags li:nth-child(4) { color: #22d3ee; }
 
-/* Service Card 04: Strategy — Blue · Orange · Green · Pink */
-.services-grid .service-card:nth-child(4) .service-tags li:nth-child(1) {
-  color: #93c5fd; background: rgba(59,130,246,0.10); border-color: rgba(59,130,246,0.22);
-}
-.services-grid .service-card:nth-child(4) .service-tags li:nth-child(2) {
-  color: #fdba74; background: rgba(249,115,22,0.10); border-color: rgba(249,115,22,0.22);
-}
-.services-grid .service-card:nth-child(4) .service-tags li:nth-child(3) {
-  color: #6ee7b7; background: rgba(16,185,129,0.10); border-color: rgba(16,185,129,0.22);
-}
-.services-grid .service-card:nth-child(4) .service-tags li:nth-child(4) {
-  color: #f9a8d4; background: rgba(236,72,153,0.10); border-color: rgba(236,72,153,0.22);
-}
+/* Card 03: Automation — Pink · Teal · Purple · Amber text */
+.services-grid .service-card:nth-child(3) .service-tags li:nth-child(1) { color: #f472b6; }
+.services-grid .service-card:nth-child(3) .service-tags li:nth-child(2) { color: #2dd4bf; }
+.services-grid .service-card:nth-child(3) .service-tags li:nth-child(3) { color: #a78bfa; }
+.services-grid .service-card:nth-child(3) .service-tags li:nth-child(4) { color: #fbbf24; }
+
+/* Card 04: Strategy — Blue · Orange · Green · Pink text */
+.services-grid .service-card:nth-child(4) .service-tags li:nth-child(1) { color: #818cf8; }
+.services-grid .service-card:nth-child(4) .service-tags li:nth-child(2) { color: #fb923c; }
+.services-grid .service-card:nth-child(4) .service-tags li:nth-child(3) { color: #34d399; }
+.services-grid .service-card:nth-child(4) .service-tags li:nth-child(4) { color: #f472b6; }
+
+/* Light mode — same glass base, slightly darker text for contrast */
+[data-theme="light"] .services-grid .service-card:nth-child(1) .service-tags li:nth-child(1) { color: #0891b2; }
+[data-theme="light"] .services-grid .service-card:nth-child(1) .service-tags li:nth-child(2) { color: #4f46e5; }
+[data-theme="light"] .services-grid .service-card:nth-child(1) .service-tags li:nth-child(3) { color: #7c3aed; }
+[data-theme="light"] .services-grid .service-card:nth-child(1) .service-tags li:nth-child(4) { color: #d97706; }
+
+[data-theme="light"] .services-grid .service-card:nth-child(2) .service-tags li:nth-child(1) { color: #059669; }
+[data-theme="light"] .services-grid .service-card:nth-child(2) .service-tags li:nth-child(2) { color: #6d28d9; }
+[data-theme="light"] .services-grid .service-card:nth-child(2) .service-tags li:nth-child(3) { color: #ea580c; }
+[data-theme="light"] .services-grid .service-card:nth-child(2) .service-tags li:nth-child(4) { color: #0891b2; }
+
+[data-theme="light"] .services-grid .service-card:nth-child(3) .service-tags li:nth-child(1) { color: #db2777; }
+[data-theme="light"] .services-grid .service-card:nth-child(3) .service-tags li:nth-child(2) { color: #0f766e; }
+[data-theme="light"] .services-grid .service-card:nth-child(3) .service-tags li:nth-child(3) { color: #6d28d9; }
+[data-theme="light"] .services-grid .service-card:nth-child(3) .service-tags li:nth-child(4) { color: #d97706; }
+
+[data-theme="light"] .services-grid .service-card:nth-child(4) .service-tags li:nth-child(1) { color: #4f46e5; }
+[data-theme="light"] .services-grid .service-card:nth-child(4) .service-tags li:nth-child(2) { color: #ea580c; }
+[data-theme="light"] .services-grid .service-card:nth-child(4) .service-tags li:nth-child(3) { color: #059669; }
+[data-theme="light"] .services-grid .service-card:nth-child(4) .service-tags li:nth-child(4) { color: #db2777; }
 
 /* ----------------------------------------------------------------
-   LIGHT MODE — muted pill colors (readable on white)
+   VENTURE PILLS — light mode (keep colored bg, darken text)
 ---------------------------------------------------------------- */
 [data-theme="light"] .venture-card--featured .venture-tech span:nth-child(1) {
   color: #1d4ed8; background: rgba(59,130,246,0.08); border-color: rgba(59,130,246,0.22);
@@ -1206,7 +1212,4 @@ select { font-family: inherit; }
 }
 [data-theme="light"] .venture-card:not(.venture-card--featured) .venture-tech span:nth-child(3) {
   color: #0f766e; background: rgba(0,201,167,0.08); border-color: rgba(0,201,167,0.22);
-}
-[data-theme="light"] .services-grid .service-tags li {
-  color: #475569; background: rgba(71,85,105,0.07); border-color: rgba(71,85,105,0.18);
 }
