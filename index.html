@@ -4,28 +4,67 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- ============================================================
-       SEO META — UPDATE before deploying
-  ============================================================ -->
-  <title>Vidya Bhushan — CTO · Co-founder · AI Builder</title>
-  <meta name="description" content="Vidya Bhushan is a CTO, Co-founder, and AI/Product Builder who turns ideas into scalable digital products. Explore ventures, insights, and ways to collaborate." />
-  <meta name="keywords" content="Vidya Bhushan, CTO, Co-founder, AI Builder, VendorMate, VidyaForge, SaaS, India" />
+  <title>Vidya Bhushan — Digital Systems for Business Growth</title>
+  <meta name="description" content="Vidya Bhushan helps small businesses, professionals and MSMEs build, grow and automate their digital presence. Co-founder at VendorMate. Based in India." />
+  <meta name="keywords" content="Vidya Bhushan, web developer Patna, digital consultant Bihar, website development India, MSME digital services, VendorMate, VidyaForge, GyanSync" />
   <meta name="author" content="Vidya Bhushan" />
   <link rel="canonical" href="https://vidyaforge.com" />
 
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://vidyaforge.com" />
-  <meta property="og:title" content="Vidya Bhushan — CTO · Co-founder · AI Builder" />
-  <meta property="og:description" content="I build scalable digital products from idea to execution." />
+  <meta property="og:title" content="Vidya Bhushan — Digital Systems for Business Growth" />
+  <meta property="og:description" content="I help businesses build, grow, and automate their digital presence — backed by real product experience. For small businesses, professionals, and growing teams." />
   <meta property="og:image" content="https://vidyaforge.com/og-image.jpg" />
+  <meta property="og:locale" content="en_IN" />
+
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:site" content="@vidyabhushan" />
-  <meta name="twitter:title" content="Vidya Bhushan — CTO · Co-founder · AI Builder" />
+  <meta name="twitter:title" content="Vidya Bhushan — Digital Systems for Business Growth" />
+  <meta name="twitter:description" content="I help businesses build, grow, and automate their digital presence." />
   <meta name="twitter:image" content="https://vidyaforge.com/og-image.jpg" />
 
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://vidyaforge.com/#person",
+        "name": "Vidya Bhushan",
+        "url": "https://vidyaforge.com",
+        "jobTitle": "Co-founder & CTO",
+        "description": "I help businesses build, grow, and automate their digital presence — backed by real product experience.",
+        "email": "hello@vidyaforge.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Patna",
+          "addressRegion": "Bihar",
+          "addressCountry": "IN"
+        },
+        "sameAs": [
+          "https://vendormate.in",
+          "https://gyansync.com"
+        ]
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://vidyaforge.com/#org",
+        "name": "VidyaForge",
+        "url": "https://vidyaforge.com",
+        "founder": { "@id": "https://vidyaforge.com/#person" },
+        "description": "Digital systems, services, and strategy for growing businesses.",
+        "areaServed": "IN"
+      }
+    ]
+  }
+  </script>
 
-  <!-- Cabinet Grotesk (display) + Satoshi (body) — free via Fontshare -->
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%2300c9a7'/><text y='.85em' font-size='58' font-family='sans-serif' font-weight='900' fill='%23070b14' x='14'>VF</text></svg>" />
+
+  <!-- Fonts: Cabinet Grotesk + Satoshi -->
   <link rel="preconnect" href="https://api.fontshare.com" />
   <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800,900&f[]=satoshi@300,400,500&display=swap" rel="stylesheet" />
 
@@ -34,19 +73,13 @@
 
 <body>
 
-  <!-- Custom Cursor -->
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-follower" id="cursorFollower"></div>
-
   <!-- ============================================================
        LOADER
   ============================================================ -->
   <div class="loader" id="loader">
     <div class="loader-inner">
-      <div class="loader-logo-wrap">
-        <span class="loader-logo">VF</span>
-        <div class="loader-tagline">VidyaForge</div>
-      </div>
+      <span class="loader-logo">VF</span>
+      <div class="loader-tagline">VidyaForge</div>
       <div class="loader-bar"><div class="loader-fill"></div></div>
     </div>
   </div>
@@ -61,19 +94,20 @@
     </a>
 
     <ul class="nav-links" id="navLinks">
+      <li><a href="#services"   class="nav-link">Services</a></li>
+      <li><a href="#ventures"   class="nav-link">Ventures</a></li>
       <li><a href="#about"      class="nav-link">About</a></li>
-      <li><a href="#expertise"  class="nav-link">Expertise</a></li>
-      <li><a href="#projects"   class="nav-link">Projects</a></li>
-      <li><a href="#experience" class="nav-link">Experience</a></li>
-      <li><a href="#insights"   class="nav-link">Insights</a></li>
+      <li><a href="#insights"   class="nav-link">Blog</a></li>
       <li><a href="#contact"    class="nav-link">Contact</a></li>
     </ul>
 
     <div class="nav-actions">
-      <!-- UPDATE: Add your resume PDF path -->
-      <a href="resume-vidya-bhushan.pdf" download class="btn-resume" id="resumeBtn">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-        Resume
+      <!-- PRIMARY NAV CTA: WhatsApp -->
+      <!-- UPDATE: Replace YOUR_NUMBER with your WhatsApp number e.g. 919876543210 -->
+      <a href="https://wa.me/YOUR_NUMBER?text=Hi%20Vidya%2C%20I%20saw%20your%20website.%20I%20need%20help%20with%20" 
+         target="_blank" rel="noopener" class="btn-whatsapp-nav">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp Me
       </a>
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
         <span class="toggle-icon sun">☀</span>
@@ -88,334 +122,262 @@
   <main>
 
     <!-- ============================================================
-         1. HERO — left: identity + CTAs | right: quick-contact card
+         1. HERO
     ============================================================ -->
     <section class="hero" id="hero">
-
-      <!-- Ambient background -->
       <div class="hero-bg" aria-hidden="true">
         <div class="grid-overlay"></div>
         <div class="orb orb-1"></div>
         <div class="orb orb-2"></div>
-        <canvas class="noise-canvas" id="noiseCanvas"></canvas>
       </div>
 
-      <!-- LEFT: Identity -->
-      <div class="hero-left">
-        <div class="hero-badge reveal-up">
-          <span class="badge-dot"></span>
-          Open to strategic partnerships
-        </div>
-
-        <h1 class="hero-name reveal-up">
-          Vidya<br /><em>Bhushan</em>
-        </h1>
-
-        <div class="hero-roles reveal-up">
-          <span class="role-fixed">CTO &amp; Co-founder</span>
-          <span class="role-divider">/</span>
-          <span id="typingTarget" class="typing-text"></span><span class="typing-cursor">|</span>
-        </div>
-
-        <!-- UPDATE: Your short bio -->
-        <p class="hero-intro reveal-up">
-          I build scalable digital products from idea to execution.
-          Systems thinker. Execution obsessed. Currently shaping
-          India's B2B infrastructure with <strong>VendorMate</strong>.
-        </p>
-
-        <div class="hero-ctas reveal-up">
-          <a href="#projects" class="btn btn-primary">
-            View My Work
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-          <a href="#contact" class="btn btn-ghost">Full Contact ↓</a>
-        </div>
-
-        <div class="hero-stats reveal-up">
-          <div class="stat">
-            <span class="stat-num" data-target="7">0</span><span class="stat-suffix">+</span>
-            <span class="stat-label">Yrs Building</span>
-          </div>
-          <div class="stat-divider"></div>
-          <div class="stat">
-            <span class="stat-num" data-target="12">0</span><span class="stat-suffix">+</span>
-            <span class="stat-label">Products Launched</span>
-          </div>
-          <div class="stat-divider"></div>
-          <div class="stat">
-            <span class="stat-num" data-target="3">0</span>
-            <span class="stat-label">Active Ventures</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- RIGHT: Quick-contact card -->
-      <div class="hero-right reveal-up">
-        <div class="quick-contact-card">
-          <div class="qc-header">
-            <div class="qc-title">
-              <span class="qc-dot"></span>
-              Quick Connect
-            </div>
-            <p class="qc-sub">Have a project in mind? Drop a line — I respond within 24 hrs.</p>
+      <div class="hero-content">
+        <div class="hero-left">
+          <div class="hero-badge reveal-up">
+            <span class="badge-dot"></span>
+            Available for new projects
           </div>
 
-          <form class="qc-form" id="quickForm" novalidate>
-            <div class="qc-field">
-              <input type="text" id="qcName" name="name" placeholder="Your name" required />
-            </div>
-            <div class="qc-field">
-              <input type="email" id="qcEmail" name="email" placeholder="Email address" required />
-            </div>
-            <div class="qc-field">
-              <!-- UPDATE: Edit options to match your common inquiry types -->
-              <select id="qcType" name="type">
-                <option value="" disabled selected>What's this about?</option>
-                <option value="partnership">Strategic Partnership</option>
-                <option value="product">Product Collaboration</option>
-                <option value="advisory">Advisory / Consulting</option>
-                <option value="hiring">Hiring / Recruitment</option>
-                <option value="investor">Investor Inquiry</option>
-                <option value="other">Something Else</option>
-              </select>
-            </div>
-            <div class="qc-field">
-              <textarea id="qcMessage" name="message" placeholder="Tell me what you're building..." rows="3" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary btn-full">
-              <span class="btn-text">Send Message</span>
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2 11 13M22 2 15 22 11 13 2 9l20-7z"/></svg>
-            </button>
-            <div class="qc-status" id="qcStatus"></div>
-          </form>
+          <h1 class="hero-name reveal-up">
+            Vidya<br /><em>Bhushan</em>
+          </h1>
 
-          <div class="qc-footer">
-            <!-- UPDATE: Your real social links -->
-            <a href="https://linkedin.com/in/vidyabhushan" target="_blank" rel="noopener" aria-label="LinkedIn" class="qc-social">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          <div class="hero-roles reveal-up">
+            <span class="role-fixed">Co-founder &amp; CTO</span>
+            <span class="role-divider">/</span>
+            <span id="typingTarget" class="typing-text"></span><span class="typing-cursor">|</span>
+          </div>
+
+          <p class="hero-intro reveal-up">
+            I help businesses build, grow, and automate their digital presence —
+            backed by real product experience.
+            <span class="hero-qualifier">For small businesses, professionals, and growing teams.</span>
+          </p>
+
+          <div class="hero-ctas reveal-up">
+            <!-- UPDATE: Replace YOUR_NUMBER -->
+            <a href="https://wa.me/YOUR_NUMBER?text=Hi%20Vidya%2C%20I%20saw%20your%20website.%20I%20need%20help%20with%20"
+               target="_blank" rel="noopener" class="btn btn-whatsapp">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              WhatsApp Me
+              <span class="btn-sub">Usually replies within a few hours</span>
             </a>
-            <a href="https://twitter.com/vidyabhushan" target="_blank" rel="noopener" aria-label="Twitter" class="qc-social">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            <a href="#ventures" class="btn btn-ghost">
+              See What I've Built
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
-            <a href="https://github.com/vidyabhushan" target="_blank" rel="noopener" aria-label="GitHub" class="qc-social">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
-            </a>
+          </div>
+
+          <div class="hero-stats reveal-up">
+            <div class="stat">
+              <span class="stat-num">5+</span>
+              <span class="stat-label">Years Building</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+              <span class="stat-num">12+</span>
+              <span class="stat-label">Products Shipped</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+              <span class="stat-num">2</span>
+              <span class="stat-label">Active Ventures</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-right reveal-up">
+          <div class="quick-contact-card">
+            <div class="qc-header">
+              <div class="qc-title">
+                <span class="qc-dot"></span>
+                Quick Connect
+              </div>
+              <p class="qc-sub">Have a project in mind? Drop a line — I respond within 24 hrs.</p>
+            </div>
+
+            <form class="qc-form" id="quickForm" novalidate>
+              <div class="qc-field">
+                <input type="text" id="qcName" name="name" placeholder="Your name" required />
+              </div>
+              <div class="qc-field">
+                <input type="email" id="qcEmail" name="email" placeholder="Email address" required />
+              </div>
+              <div class="qc-field">
+                <select id="qcType" name="type">
+                  <option value="" disabled selected>I need help with...</option>
+                  <option value="website">Website / Digital Presence</option>
+                  <option value="seo">SEO &amp; Lead Generation</option>
+                  <option value="automation">Automation &amp; AI</option>
+                  <option value="strategy">Strategy &amp; Consulting</option>
+                  <option value="partnership">Partnership / Co-building</option>
+                  <option value="other">Something Else</option>
+                </select>
+              </div>
+              <div class="qc-field">
+                <textarea id="qcMessage" name="message" placeholder="Tell me what you're working on..." rows="3" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full">
+                <span class="btn-text">Send Message</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2 11 13M22 2 15 22 11 13 2 9l20-7z"/></svg>
+              </button>
+              <div class="qc-status" id="qcStatus"></div>
+            </form>
           </div>
         </div>
       </div>
 
-      <a href="#about" class="scroll-indicator" aria-label="Scroll to about">
+      <a href="#services" class="scroll-indicator" aria-label="Scroll down">
         <div class="scroll-line"></div>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
       </a>
     </section>
 
     <!-- ============================================================
-         2. ABOUT
+         2. SERVICES — most important section
     ============================================================ -->
-    <section class="about section" id="about">
+    <section class="services section" id="services">
       <div class="container">
-        <div class="section-label reveal-up">About</div>
-        <div class="about-grid">
-          <div class="about-text">
-            <h2 class="section-heading reveal-up">
-              Not just building products.<br />
-              <em>Building systems that scale.</em>
-            </h2>
+        <div class="section-label reveal-up">What I Can Do For You</div>
+        <h2 class="section-heading reveal-up">Services that<br /><em>move the needle.</em></h2>
 
-            <div class="about-story reveal-up">
-              <p>My career didn't start at a whiteboard. It started on the ground — managing projects, coordinating vendors, watching execution fail at the last mile because the right tools didn't exist. That gap became my obsession.</p>
-              <p>From Project Manager to Web Developer to Co-founder, every step was deliberate. I didn't chase job titles — I chased problems worth solving. At <strong>Global Lancers</strong>, I learned how complex B2B workflows break down. At <strong>Veda Junction</strong>, I learned how to build digital systems people actually use. Then I decided to build one of my own.</p>
-              <p>Today, as Co-founder &amp; CTO of <strong>VendorMate</strong>, I'm building India's B2B execution infrastructure — connecting corporate clients with verified ground teams at scale. The mission is simple: make India's MSME ecosystem trustworthy, trackable, and tech-enabled.</p>
-              <p>I think in systems. I ship in sprints. And I believe the best product is one that makes itself necessary.</p>
-            </div>
+        <div class="services-grid">
 
-            <div class="about-highlights reveal-up">
-              <div class="highlight"><span class="highlight-icon">◈</span><span>Systems thinker with execution bias</span></div>
-              <div class="highlight"><span class="highlight-icon">◈</span><span>0→1 product builder with deep B2B experience</span></div>
-              <div class="highlight"><span class="highlight-icon">◈</span><span>AI &amp; automation-first approach to every product</span></div>
+          <div class="service-card reveal-up" data-delay="0">
+            <div class="service-num">01</div>
+            <div class="service-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
             </div>
+            <h3>Website &amp; Digital Presence</h3>
+            <p>A website designed to convert visitors into enquiries — not just look good. Business sites, landing pages, and portfolios built for real results.</p>
+            <ul class="service-tags">
+              <li>Business Websites</li><li>Landing Pages</li><li>Portfolio Sites</li><li>Speed Optimisation</li>
+            </ul>
+            <!-- UPDATE: Replace YOUR_NUMBER -->
+            <a href="https://wa.me/YOUR_NUMBER?text=Hi%20Vidya%2C%20I%20need%20help%20with%20a%20website%20or%20digital%20presence." 
+               target="_blank" rel="noopener" class="service-cta">
+              Start on WhatsApp
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
           </div>
 
-          <div class="about-aside reveal-up">
-            <div class="aside-card">
-              <div class="aside-label">Currently</div>
-              <div class="aside-value">Building VendorMate</div>
-              <div class="aside-sub">India's Private GeM Platform</div>
+          <div class="service-card reveal-up" data-delay="1">
+            <div class="service-num">02</div>
+            <div class="service-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
             </div>
-            <div class="aside-card">
-              <div class="aside-label">Based in</div>
-              <div class="aside-value">India 🇮🇳</div>
-            </div>
-            <div class="aside-card">
-              <div class="aside-label">Open to</div>
-              <div class="aside-value">Strategic partnerships, advisory &amp; co-building</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         3. EXPERTISE
-    ============================================================ -->
-    <section class="expertise section" id="expertise">
-      <div class="container">
-        <div class="section-label reveal-up">What I Do</div>
-        <h2 class="section-heading reveal-up">Capabilities that<br /><em>compound.</em></h2>
-        <div class="expertise-grid">
-          <div class="exp-card reveal-up" data-delay="0">
-            <div class="exp-num">01</div>
-            <div class="exp-icon-wrap">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 17.5h7M17.5 14v7"/></svg>
-            </div>
-            <h3>Product Thinking</h3>
-            <p>From market insight to feature roadmap. I translate messy business problems into structured product logic — flows, prioritisation, and product-market fit diagnostics.</p>
-            <ul class="exp-tags"><li>Roadmapping</li><li>UX Strategy</li><li>0→1 Products</li><li>B2B Workflows</li></ul>
+            <h3>Growth &amp; Lead Generation</h3>
+            <p>Simple systems that consistently bring you new leads. SEO, conversion-focused pages, and funnel thinking that turns traffic into actual business.</p>
+            <ul class="service-tags">
+              <li>Local SEO</li><li>Lead Funnels</li><li>Google Presence</li><li>Conversion Pages</li>
+            </ul>
+            <a href="https://wa.me/YOUR_NUMBER?text=Hi%20Vidya%2C%20I%20need%20help%20with%20SEO%20and%20lead%20generation." 
+               target="_blank" rel="noopener" class="service-cta">
+              Start on WhatsApp
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
           </div>
 
-          <div class="exp-card reveal-up" data-delay="1">
-            <div class="exp-num">02</div>
-            <div class="exp-icon-wrap">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-            </div>
-            <h3>Development &amp; Architecture</h3>
-            <p>Full-stack pragmatism. I architect systems for scale — clean APIs, modular codebases, and infrastructure that doesn't collapse when growth hits.</p>
-            <ul class="exp-tags"><li>React / Node.js</li><li>REST APIs</li><li>Cloud Infra</li><li>System Design</li></ul>
-          </div>
-
-          <div class="exp-card reveal-up highlight-card" data-delay="2">
-            <div class="exp-badge">Core Strength</div>
-            <div class="exp-num">03</div>
-            <div class="exp-icon-wrap">
+          <div class="service-card service-card--featured reveal-up" data-delay="2">
+            <div class="service-badge">Most Popular</div>
+            <div class="service-num">03</div>
+            <div class="service-icon">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 6v6l4 2"/><path d="M18 2v4h4"/></svg>
             </div>
             <h3>Automation &amp; AI</h3>
-            <p>The biggest leverage in modern products. I embed automation into execution flows — reducing bottlenecks, improving reliability, and making systems self-healing.</p>
-            <ul class="exp-tags"><li>AI Integration</li><li>Workflow Automation</li><li>LLM Products</li><li>Process Ops</li></ul>
+            <p>Automation that saves you hours every week. WhatsApp automation, AI-powered workflows, and smart tools that make your business run smoother without more staff.</p>
+            <ul class="service-tags">
+              <li>WhatsApp Automation</li><li>AI Tools Setup</li><li>Workflow Systems</li><li>Process Ops</li>
+            </ul>
+            <a href="https://wa.me/YOUR_NUMBER?text=Hi%20Vidya%2C%20I%20need%20help%20with%20automation%20and%20AI%20tools." 
+               target="_blank" rel="noopener" class="service-cta">
+              Start on WhatsApp
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
           </div>
 
-          <div class="exp-card reveal-up" data-delay="3">
-            <div class="exp-num">04</div>
-            <div class="exp-icon-wrap">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          <div class="service-card reveal-up" data-delay="3">
+            <div class="service-num">04</div>
+            <div class="service-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
             </div>
-            <h3>Business &amp; Growth</h3>
-            <p>Technology decisions are business decisions. I understand unit economics, GTM strategy, and how to build products that grow without burning cash.</p>
-            <ul class="exp-tags"><li>GTM Strategy</li><li>B2B Sales Ops</li><li>Fundraising Prep</li><li>Analytics</li></ul>
+            <h3>Strategy &amp; Consulting</h3>
+            <p>A clear digital roadmap so you stop guessing and start growing. Tech decisions, scaling advice, and honest guidance — not just what you want to hear.</p>
+            <ul class="service-tags">
+              <li>Digital Roadmap</li><li>Tech Decisions</li><li>Business Scaling</li><li>Advisory</li>
+            </ul>
+            <a href="https://wa.me/YOUR_NUMBER?text=Hi%20Vidya%2C%20I%20need%20strategy%20and%20consulting%20help." 
+               target="_blank" rel="noopener" class="service-cta">
+              Start on WhatsApp
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
           </div>
+
         </div>
+
+        <p class="services-note">All services are executed through my agency, <a href="https://gyansync.com" target="_blank" rel="noopener">GyanSync</a>.</p>
       </div>
     </section>
 
     <!-- ============================================================
-         4. PROJECTS
-         ADD NEW PROJECT: copy a .project-card div, set data-category
+         3. VENTURES — proof, not story
     ============================================================ -->
-    <section class="projects section" id="projects">
+    <section class="ventures section" id="ventures">
       <div class="container">
-        <div class="section-label reveal-up">Work</div>
-        <div class="projects-header reveal-up">
-          <h2 class="section-heading">Ventures &amp;<br /><em>Products.</em></h2>
-          <div class="filter-bar" role="group" aria-label="Filter projects">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="featured">Featured</button>
-            <button class="filter-btn" data-filter="saas">SaaS</button>
-            <button class="filter-btn" data-filter="automation">Automation</button>
-            <button class="filter-btn" data-filter="web">Web</button>
-          </div>
-        </div>
+        <div class="section-label reveal-up">What I've Built</div>
+        <h2 class="section-heading reveal-up">Ventures &amp;<br /><em>products.</em></h2>
 
-        <div class="projects-grid">
+        <div class="ventures-grid">
 
-          <!-- FEATURED: VENDORMATE -->
-          <div class="project-card featured-card reveal-up" data-category="featured saas">
-            <div class="project-card-inner">
-              <div class="project-left-col">
-                <div class="project-header">
-                  <div class="project-meta">
-                    <span class="project-tag accent-tag">Featured</span>
-                    <span class="project-tag">Co-founder</span>
-                  </div>
-                  <div class="project-status live"><span class="status-dot"></span>Live</div>
-                </div>
-                <h3 class="project-title">VendorMate</h3>
-                <p class="project-tagline">Empowering Bharat's MSMEs</p>
-                <p class="project-desc">India's Premier 'Private GeM' platform for end-to-end B2B Projects, Tenders, and Outsourcing. Organizing Bharat's execution market using trust + technology.</p>
-                <div class="project-tech">
-                  <!-- UPDATE: Your actual stack -->
-                  <span>React</span><span>Node.js</span><span>PostgreSQL</span><span>AWS</span><span>AI Matching</span>
-                </div>
-                <div class="project-footer">
-                  <div class="project-role"><span class="role-label">Role:</span> Co-founder &amp; CTO</div>
-                  <!-- UPDATE: Your VendorMate URL -->
-                  <a href="https://vendormate.in/" class="btn btn-primary btn-sm" target="_blank" rel="noopener">
-                    View Project <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                  </a>
-                </div>
+          <div class="venture-card venture-card--featured reveal-up">
+            <div class="venture-header">
+              <div class="venture-meta">
+                <span class="venture-tag accent-tag">Featured</span>
+                <span class="venture-tag">Co-founder</span>
               </div>
+              <div class="venture-status live"><span class="status-dot"></span>Live</div>
+            </div>
+            <h3 class="venture-title">VendorMate</h3>
+            <p class="venture-sub">India's B2B Contractor Marketplace</p>
+            <p class="venture-desc">India's premier 'Private GeM' platform — connecting corporate clients with verified ground teams for tenders, projects, and outsourcing. Organizing Bharat's execution market using trust and technology.</p>
 
-              <div class="project-right-col">
-                <div class="project-pillars">
-                  <div class="pillar">
-                    <span class="pillar-label">Problem</span>
-                    <p>Fragmented execution ecosystem, unreliable ground teams, payment disputes across India's contractor market.</p>
-                  </div>
-                  <div class="pillar">
-                    <span class="pillar-label">Solution</span>
-                    <p>Direct connection between Corporate TSPs and verified contractors — with trust scores, escrow, and real-time tracking.</p>
-                  </div>
-                  <div class="pillar">
-                    <span class="pillar-label">My Contribution</span>
-                    <p>Leading product &amp; technology — architecture, scalable systems, execution workflows, and team building.</p>
-                  </div>
-                </div>
+            <div class="venture-pillars">
+              <div class="pillar">
+                <span class="pillar-label">Problem</span>
+                <p>Fragmented execution ecosystem, unreliable contractors, payment disputes across India's B2B market.</p>
               </div>
+              <div class="pillar">
+                <span class="pillar-label">Solution</span>
+                <p>Direct connections with verified teams — trust scores, escrow, and real-time tracking built in.</p>
+              </div>
+            </div>
+
+            <div class="venture-footer">
+              <div class="venture-tech"><span>React</span><span>Node.js</span><span>PostgreSQL</span><span>AWS</span></div>
+              <a href="https://vendormate.in/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+                View Project
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
             </div>
           </div>
 
-          <!-- PROJECT 2 — UPDATE -->
-          <div class="project-card reveal-up" data-category="automation">
-            <div class="project-card-inner">
-              <div class="project-header">
-                <div class="project-meta"><span class="project-tag">Automation</span></div>
-                <div class="project-status wip"><span class="status-dot"></span>In Progress</div>
+          <div class="venture-card reveal-up">
+            <div class="venture-header">
+              <div class="venture-meta">
+                <span class="venture-tag">Agency</span>
+                <span class="venture-tag">Founder</span>
               </div>
-              <h3 class="project-title">AI Workflow Engine</h3>
-              <p class="project-desc">Internal automation layer powering VendorMate's verification, matching, and contractor scoring systems. Reduces manual ops by 70%.</p>
-              <div class="project-tech"><span>Python</span><span>LangChain</span><span>Celery</span><span>Redis</span></div>
-              <div class="project-footer">
-                <div class="project-role"><span class="role-label">Role:</span> Architect &amp; Builder</div>
-                <a href="#" class="btn btn-ghost btn-sm">Coming Soon</a>
-              </div>
+              <div class="venture-status live"><span class="status-dot"></span>Live</div>
             </div>
-          </div>
-
-          <!-- PROJECT 3 — UPDATE -->
-          <div class="project-card reveal-up" data-category="web">
-            <div class="project-card-inner">
-              <div class="project-header">
-                <div class="project-meta"><span class="project-tag">Web Platform</span></div>
-                <div class="project-status done"><span class="status-dot"></span>Shipped</div>
-              </div>
-              <h3 class="project-title">Global Lancers Portal</h3>
-              <p class="project-desc">End-to-end project management and freelancer operations portal for a global services firm. Multi-timezone workflows and intelligent resource allocation.</p>
-              <div class="project-tech"><span>React</span><span>REST API</span><span>MySQL</span></div>
-              <div class="project-footer">
-                <div class="project-role"><span class="role-label">Role:</span> Lead Developer &amp; PM</div>
-                <a href="#" class="btn btn-ghost btn-sm" target="_blank" rel="noopener">View Project</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- PLACEHOLDER — duplicate to add future projects -->
-          <div class="project-card placeholder-card reveal-up" data-category="saas">
-            <div class="project-card-inner placeholder-content">
-              <div class="placeholder-icon">◌</div>
-              <h3>Next Venture</h3>
-              <p>Something significant is in the works. Details coming soon.</p>
-              <span class="placeholder-badge">2025 — TBA</span>
+            <h3 class="venture-title">GyanSync</h3>
+            <p class="venture-sub">Digital Agency</p>
+            <p class="venture-desc">The agency through which all client services are delivered. Web development, digital marketing, automation, and growth systems for businesses ready to scale.</p>
+            <div class="venture-footer">
+              <div class="venture-tech"><span>Web Dev</span><span>Marketing</span><span>Automation</span></div>
+              <a href="https://gyansync.com/" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">
+                Visit Agency
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
             </div>
           </div>
 
@@ -424,7 +386,55 @@
     </section>
 
     <!-- ============================================================
-         5. EXPERIENCE
+         4. ABOUT — short, punchy
+    ============================================================ -->
+    <section class="about section" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-left reveal-up">
+            <div class="section-label">About</div>
+            <h2 class="section-heading">
+              Not just a service provider.<br />
+              <em>Someone who's built real products.</em>
+            </h2>
+            <div class="about-story">
+              <p>I didn't start at a whiteboard. I started on the ground — managing projects, coordinating vendors, watching execution break at the last mile because the right tools didn't exist. That gap became my obsession.</p>
+              <p>From Project Manager to Web Developer to Co-founder, every step was deliberate. Today I run <strong>VendorMate</strong>, India's B2B contractor marketplace, and <strong>GyanSync</strong>, a digital agency delivering real results for businesses across India.</p>
+              <p>I think in systems. I ship in sprints. And I believe the difference between a freelancer and a partner is whether they understand your business before touching the keyboard.</p>
+            </div>
+            <div class="about-highlights">
+              <div class="highlight"><span class="highlight-icon">◈</span><span>5+ years building real products, not just websites</span></div>
+              <div class="highlight"><span class="highlight-icon">◈</span><span>Execution-first — I've built and scaled from zero</span></div>
+              <div class="highlight"><span class="highlight-icon">◈</span><span>AI &amp; automation embedded in everything I build</span></div>
+            </div>
+          </div>
+
+          <div class="about-right reveal-up">
+            <div class="aside-card">
+              <div class="aside-label">Currently</div>
+              <div class="aside-value">Co-founder @ VendorMate</div>
+              <div class="aside-sub">India's B2B Contractor Marketplace</div>
+            </div>
+            <div class="aside-card">
+              <div class="aside-label">Also running</div>
+              <div class="aside-value">GyanSync Agency</div>
+              <div class="aside-sub">Where client work gets executed</div>
+            </div>
+            <div class="aside-card">
+              <div class="aside-label">Based in</div>
+              <div class="aside-value">Patna, Bihar · India</div>
+            </div>
+            <div class="aside-card">
+              <div class="aside-label">Open to</div>
+              <div class="aside-value">Client projects, partnerships &amp; advisory</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         5. EXPERIENCE — condensed timeline
     ============================================================ -->
     <section class="experience section" id="experience">
       <div class="container">
@@ -438,15 +448,15 @@
               <div class="timeline-header">
                 <div>
                   <h3 class="timeline-role">Co-founder &amp; CTO</h3>
-                  <span class="timeline-company">VendorMate</span>
+                  <span class="timeline-company">VendorMate · GyanSync</span>
                 </div>
                 <span class="timeline-period">2023 — Present</span>
               </div>
-              <p class="timeline-desc">Leading product strategy and technology architecture for India's B2B contractor marketplace. Built the platform from zero — product design, system architecture, team building, and GTM execution.</p>
+              <p class="timeline-desc">Building India's B2B contractor marketplace from zero — architecture, product, team, and GTM. Simultaneously running GyanSync to deliver digital services for clients.</p>
               <ul class="timeline-achievements">
-                <li>Designed and shipped the core marketplace MVP end-to-end</li>
-                <li>Built scalable contractor verification and matching algorithms</li>
-                <li>Established engineering culture and deployment pipelines</li>
+                <li>Designed and shipped the VendorMate marketplace MVP end-to-end</li>
+                <li>Built contractor verification and AI matching systems</li>
+                <li>Delivering client web, marketing and automation projects via GyanSync</li>
               </ul>
             </div>
           </div>
@@ -461,7 +471,7 @@
                 </div>
                 <span class="timeline-period">2021 — 2023</span>
               </div>
-              <p class="timeline-desc">Managed complex B2B project delivery across distributed teams. Developed deep understanding of execution gaps in outsourcing workflows — the insight that would later fuel VendorMate.</p>
+              <p class="timeline-desc">Managed complex B2B project delivery across distributed teams. Gained deep insight into execution gaps in outsourcing — the insight that later became VendorMate.</p>
               <ul class="timeline-achievements">
                 <li>Delivered 20+ client projects across verticals</li>
                 <li>Reduced delivery time by 30% through process automation</li>
@@ -479,10 +489,10 @@
                 </div>
                 <span class="timeline-period">2019 — 2021</span>
               </div>
-              <p class="timeline-desc">Built and maintained web products for clients across education and services sectors. Learned the craft of turning requirements into functional, user-friendly digital products.</p>
+              <p class="timeline-desc">Built web products for clients across education and services sectors. Learned how to turn requirements into functional, user-friendly digital products.</p>
               <ul class="timeline-achievements">
                 <li>Built client-facing platforms used by thousands of users</li>
-                <li>Led frontend architecture decisions for key product launches</li>
+                <li>Led frontend architecture for key product launches</li>
               </ul>
             </div>
           </div>
@@ -492,74 +502,25 @@
     </section>
 
     <!-- ============================================================
-         6. TESTIMONIALS
-    ============================================================ -->
-    <section class="testimonials section" id="testimonials">
-      <div class="container">
-        <div class="section-label reveal-up">Testimonials</div>
-        <h2 class="section-heading reveal-up">Trusted by<br /><em>builders.</em></h2>
-        <div class="testimonials-grid">
-
-          <div class="testimonial-card reveal-up">
-            <div class="quote-mark">"</div>
-            <p class="testimonial-text">Vidya doesn't just build features — he builds systems. Working with him on our vendor onboarding flow was one of the most efficient product experiences I've had. He understands the business before writing a single line of code.</p>
-            <div class="testimonial-author">
-              <div class="author-avatar">AK</div>
-              <div>
-                <div class="author-name">Arjun Kapoor</div>
-                <div class="author-role">Head of Procurement, TechCorp India</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card reveal-up">
-            <div class="quote-mark">"</div>
-            <p class="testimonial-text">Rare combination — a CTO who can go deep on architecture and still walk into a client meeting and speak their language. VendorMate's execution quality reflects Vidya's attention to every detail.</p>
-            <div class="testimonial-author">
-              <div class="author-avatar">SR</div>
-              <div>
-                <div class="author-name">Sneha Rao</div>
-                <div class="author-role">Founder, UrbanOps</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card reveal-up">
-            <div class="quote-mark">"</div>
-            <p class="testimonial-text">He shipped a fully working MVP in 6 weeks — not a prototype, a real product. That kind of velocity without compromising quality is rare in the Indian startup ecosystem.</p>
-            <div class="testimonial-author">
-              <div class="author-avatar">PM</div>
-              <div>
-                <div class="author-name">Priya Mehta</div>
-                <div class="author-role">Angel Investor</div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         7. INSIGHTS — scalable, link-out cards
+         6. INSIGHTS — links to Hashnode blog
          HOW TO ADD A NEW ARTICLE:
-         1. Copy one .insight-card block below
-         2. Update: tag, date, title, excerpt, href on the Read button
-         3. Set data-published="true" when article is live
-         4. That's it — the grid handles layout automatically
+         1. Copy an .insight-card block
+         2. Set data-published="true"
+         3. Update href, title, excerpt, tag, date
+         4. Push to Vercel — done.
+
+         BLOG SETUP: Point blog.vidyaforge.com → Hashnode
+         In Vercel DNS: add CNAME record: blog → hashnode.network
     ============================================================ -->
     <section class="insights section" id="insights">
       <div class="container">
-        <div class="section-label reveal-up">Insights</div>
+        <div class="section-label reveal-up">Blog</div>
         <div class="insights-header reveal-up">
-          <div>
-            <h2 class="section-heading">Thinking out<br /><em>loud.</em></h2>
-          </div>
+          <h2 class="section-heading">Thinking out<br /><em>loud.</em></h2>
           <div class="insights-meta">
-            <p class="insights-sub">Deep dives on building, systems, and India's startup ecosystem. A few per year — no fluff, no newsletters.</p>
-            <!-- UPDATE: Add your Medium/Substack/blog URL here -->
-            <a href="https://medium.com/@vidyabhushan" target="_blank" rel="noopener" class="btn btn-ghost btn-sm insights-all-btn">
-              All Articles
+            <p class="insights-sub">Practical writing on building, growth, and digital systems for Indian businesses. No fluff.</p>
+            <a href="https://blog.vidyaforge.com" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">
+              Read on Blog
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
             </a>
           </div>
@@ -567,19 +528,12 @@
 
         <div class="insights-grid">
 
-          <!-- ====================================================
-               ARTICLE CARD TEMPLATE
-               data-published="true"  → shows "Read Article" button
-               data-published="false" → shows "Coming Soon" state
-               UPDATE: href, title, excerpt, tag, date for each card
-          ==================================================== -->
-
+          <!-- Article cards below. Set data-published="true" and update href when live -->
           <article class="insight-card reveal-up" data-published="false">
             <div class="insight-inner">
               <div class="insight-meta-row">
                 <span class="insight-tag">Product</span>
-                <!-- UPDATE: Change to real date when published e.g. "Jun 2025" -->
-                <span class="insight-date">Coming Soon</span>
+                <span class="insight-date">Publishing soon</span>
               </div>
               <div class="insight-body">
                 <h3>Why India's B2B Market Needs a Trust Layer Before a Tech Layer</h3>
@@ -587,10 +541,9 @@
               </div>
               <div class="insight-footer">
                 <div class="insight-read-time">8 min read</div>
-                <!-- UPDATE: Set href to your article URL when published -->
-                <a href="#" class="insight-cta coming-soon-cta" aria-disabled="true">
-                  <span>Notify Me</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+                <a href="https://blog.vidyaforge.com" target="_blank" rel="noopener" class="insight-cta blog-cta">
+                  <span>Read on Blog</span>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </a>
               </div>
             </div>
@@ -599,18 +552,18 @@
           <article class="insight-card reveal-up" data-published="false">
             <div class="insight-inner">
               <div class="insight-meta-row">
-                <span class="insight-tag">AI</span>
-                <span class="insight-date">Coming Soon</span>
+                <span class="insight-tag">Growth</span>
+                <span class="insight-date">Publishing soon</span>
               </div>
               <div class="insight-body">
-                <h3>How I Use AI as a Force Multiplier — Not a Feature</h3>
-                <p>Most teams bolt AI onto products as a checkbox. I'll show you the right mental model for embedding AI into execution workflows.</p>
+                <h3>How Small Businesses Lose Clients Before the First Call</h3>
+                <p>Most business enquiries die in the first 5 minutes. Here's the digital leak that's costing you leads — and how to fix it this week.</p>
               </div>
               <div class="insight-footer">
                 <div class="insight-read-time">6 min read</div>
-                <a href="#" class="insight-cta coming-soon-cta" aria-disabled="true">
-                  <span>Notify Me</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+                <a href="https://blog.vidyaforge.com" target="_blank" rel="noopener" class="insight-cta blog-cta">
+                  <span>Read on Blog</span>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </a>
               </div>
             </div>
@@ -620,53 +573,28 @@
             <div class="insight-inner">
               <div class="insight-meta-row">
                 <span class="insight-tag">Founder</span>
-                <span class="insight-date">Coming Soon</span>
+                <span class="insight-date">Publishing soon</span>
               </div>
               <div class="insight-body">
-                <h3>From PM to CTO: What the Transition Actually Looks Like</h3>
-                <p>The jump from managing projects to building companies isn't a promotion — it's a complete rewiring of how you think about risk and value.</p>
+                <h3>What I Learned Building VendorMate from Zero</h3>
+                <p>From idea to live product — the real story of what worked, what broke, and what I'd do differently building India's B2B marketplace.</p>
               </div>
               <div class="insight-footer">
                 <div class="insight-read-time">10 min read</div>
-                <a href="#" class="insight-cta coming-soon-cta" aria-disabled="true">
-                  <span>Notify Me</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+                <a href="https://blog.vidyaforge.com" target="_blank" rel="noopener" class="insight-cta blog-cta">
+                  <span>Read on Blog</span>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </a>
               </div>
             </div>
           </article>
-
-          <!--
-          =====================================================
-          PUBLISHED ARTICLE EXAMPLE — uncomment & fill when ready:
-
-          <article class="insight-card reveal-up" data-published="true">
-            <div class="insight-inner">
-              <div class="insight-meta-row">
-                <span class="insight-tag">Product</span>
-                <span class="insight-date">Jan 2025</span>
-              </div>
-              <div class="insight-body">
-                <h3>Your Article Title Here</h3>
-                <p>Short excerpt — 1–2 sentences that make someone want to click.</p>
-              </div>
-              <div class="insight-footer">
-                <div class="insight-read-time">5 min read</div>
-                <a href="https://medium.com/your-article-url" target="_blank" rel="noopener" class="insight-cta live-cta">
-                  <span>Read Article</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                </a>
-              </div>
-            </div>
-          </article>
-          ===================================================== -->
 
         </div>
       </div>
     </section>
 
     <!-- ============================================================
-         8. CONTACT — detailed section
+         8. CONTACT
     ============================================================ -->
     <section class="contact section" id="contact">
       <div class="container">
@@ -675,10 +603,23 @@
 
           <div class="contact-left reveal-up">
             <h2 class="section-heading">Let's build<br /><em>something real.</em></h2>
-            <p class="contact-intro">Whether you're building something ambitious, looking for a technical co-founder, want to partner, or just want to talk about India's execution economy — I'm reachable.</p>
+            <p class="contact-intro">Whether you need a website, SEO, automation, or just an honest conversation about your digital strategy — I'm reachable. Best suited for businesses serious about improving their digital presence.</p>
+
+            <!-- PRIMARY: WhatsApp -->
+            <!-- UPDATE: Replace YOUR_NUMBER -->
+            <a href="https://wa.me/YOUR_NUMBER?text=Hi%20Vidya%2C%20I%20saw%20your%20website.%20I%20need%20help%20with%20"
+               target="_blank" rel="noopener" class="whatsapp-cta-big">
+              <div class="wca-icon">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              </div>
+              <div class="wca-text">
+                <span class="wca-label">WhatsApp — fastest response</span>
+                <span class="wca-sub">Usually replies within a few hours</span>
+              </div>
+              <svg class="wca-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
 
             <div class="contact-links">
-              <!-- UPDATE: All links below -->
               <a href="mailto:hello@vidyaforge.com" class="contact-link">
                 <span class="contact-link-icon">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
@@ -688,31 +629,22 @@
                   <div class="cl-value">hello@vidyaforge.com</div>
                 </div>
               </a>
-              <a href="https://linkedin.com/in/vidyabhushan" target="_blank" rel="noopener" class="contact-link">
+              <a href="https://vendormate.in" target="_blank" rel="noopener" class="contact-link">
                 <span class="contact-link-icon">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
                 </span>
                 <div>
-                  <div class="cl-label">LinkedIn</div>
-                  <div class="cl-value">linkedin.com/in/vidyabhushan</div>
+                  <div class="cl-label">Venture</div>
+                  <div class="cl-value">vendormate.in</div>
                 </div>
               </a>
-              <a href="https://twitter.com/vidyabhushan" target="_blank" rel="noopener" class="contact-link">
+              <a href="https://gyansync.com" target="_blank" rel="noopener" class="contact-link">
                 <span class="contact-link-icon">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 17.5h7M17.5 14v7"/></svg>
                 </span>
                 <div>
-                  <div class="cl-label">Twitter / X</div>
-                  <div class="cl-value">@vidyabhushan</div>
-                </div>
-              </a>
-              <a href="https://github.com/vidyabhushan" target="_blank" rel="noopener" class="contact-link">
-                <span class="contact-link-icon">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
-                </span>
-                <div>
-                  <div class="cl-label">GitHub</div>
-                  <div class="cl-value">github.com/vidyabhushan</div>
+                  <div class="cl-label">Agency</div>
+                  <div class="cl-value">gyansync.com</div>
                 </div>
               </a>
             </div>
@@ -732,12 +664,20 @@
                 </div>
               </div>
               <div class="form-group">
-                <label for="cfSubject">Subject</label>
-                <input type="text" id="cfSubject" name="subject" placeholder="What's this about?" />
+                <label for="cfService">I need help with</label>
+                <select id="cfService" name="service">
+                  <option value="" disabled selected>Choose a service...</option>
+                  <option value="website">Website / Digital Presence</option>
+                  <option value="seo">SEO &amp; Lead Generation</option>
+                  <option value="automation">Automation &amp; AI</option>
+                  <option value="strategy">Strategy &amp; Consulting</option>
+                  <option value="partnership">Partnership / Co-building</option>
+                  <option value="other">Something Else</option>
+                </select>
               </div>
               <div class="form-group">
                 <label for="cfMessage">Message</label>
-                <textarea id="cfMessage" name="message" rows="5" placeholder="Tell me what you're building..." required></textarea>
+                <textarea id="cfMessage" name="message" rows="5" placeholder="Tell me about your business and what you're trying to achieve..." required></textarea>
               </div>
               <button type="submit" class="btn btn-primary btn-full">
                 <span class="btn-text">Send Message</span>
@@ -763,30 +703,24 @@
           <span class="brand-monogram">VB</span>
           <div>
             <div class="footer-name">Vidya Bhushan</div>
-            <div class="footer-tagline">I build scalable digital products from idea to execution.</div>
+            <div class="footer-tagline">Building digital systems for growing businesses · Patna, India</div>
           </div>
         </div>
-        <nav class="footer-nav" aria-label="Footer">
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="#services">Services</a>
+          <a href="#ventures">Ventures</a>
           <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#experience">Experience</a>
-          <a href="#insights">Insights</a>
+          <a href="#insights">Blog</a>
           <a href="#contact">Contact</a>
         </nav>
-        <div class="footer-socials">
-          <a href="https://linkedin.com/in/vidyabhushan" target="_blank" rel="noopener" aria-label="LinkedIn">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
-          </a>
-          <a href="https://twitter.com/vidyabhushan" target="_blank" rel="noopener" aria-label="Twitter">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-          </a>
-          <a href="https://github.com/vidyabhushan" target="_blank" rel="noopener" aria-label="GitHub">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
-          </a>
+        <div class="footer-links">
+          <a href="https://vendormate.in" target="_blank" rel="noopener">VendorMate ↗</a>
+          <a href="https://gyansync.com" target="_blank" rel="noopener">GyanSync ↗</a>
+          <a href="https://blog.vidyaforge.com" target="_blank" rel="noopener">Blog ↗</a>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© <span id="footerYear"></span> Vidya Bhushan · VidyaForge</span>
+        <span>© <span id="footerYear"></span> Vidya Bhushan · VidyaForge · Patna, Bihar, India</span>
         <span>Built with precision, not templates.</span>
       </div>
     </div>
