@@ -4,27 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Vidya Bhushan — Founder-Led Digital Systems Studio</title>
-  <meta name="description" content="Vidya Bhushan is a founder-led digital systems studio helping businesses build, grow and automate their digital presence. Co-founder at VendorMate. Based in Patna, India." />
-  <meta name="keywords" content="Vidya Bhushan, web developer Patna, digital consultant Bihar, website development India, MSME digital services, VendorMate, VidyaForge, GyanSync" />
+  <title>Vidya Bhushan — Founder-led Digital Systems Studio</title>
+  <meta name="description" content="Vidya Bhushan builds digital systems that help businesses grow — websites, automation, and strategy backed by real product experience. Founder at VidyaForge, Co-founder at VendorMate. Patna, India." />
+  <meta name="keywords" content="Vidya Bhushan, web developer Patna, digital consultant Bihar, website development India, MSME digital services, VendorMate, VidyaForge, GyanSync, digital systems India" />
   <meta name="author" content="Vidya Bhushan" />
   <link rel="canonical" href="https://vidyaforge.com" />
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://vidyaforge.com" />
-  <meta property="og:title" content="Vidya Bhushan — Founder-Led Digital Systems Studio" />
-  <meta property="og:description" content="Founder-led digital systems studio — helping businesses turn digital presence into real growth." />
-  <meta property="og:image" content="https://vidyaforge.com/og-image.jpg" />
-  <meta property="og:locale" content="en_IN" />
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://vidyaforge.com" />
+  <meta property="og:title"       content="Vidya Bhushan — Founder-led Digital Systems Studio" />
+  <meta property="og:description" content="I build digital systems that help businesses grow — websites, automation, and strategy backed by real product experience." />
+  <meta property="og:image"       content="https://vidyaforge.com/og-image.jpg" />
+  <meta property="og:locale"      content="en_IN" />
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Vidya Bhushan — Founder-led Digital Systems Studio" />
+  <meta name="twitter:description" content="I build digital systems that help businesses grow." />
+  <meta name="twitter:image"       content="https://vidyaforge.com/og-image.jpg" />
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Vidya Bhushan — Founder-Led Digital Systems Studio" />
-  <meta name="twitter:description" content="Founder-led digital systems studio — helping businesses turn digital presence into real growth." />
-  <meta name="twitter:image" content="https://vidyaforge.com/og-image.jpg" />
-
-  <!-- JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -35,7 +31,7 @@
         "name": "Vidya Bhushan",
         "url": "https://vidyaforge.com",
         "jobTitle": "Founder & CTO",
-        "description": "Founder-led digital systems studio — helping businesses turn digital presence into real growth.",
+        "description": "I build digital systems that help businesses grow — websites, automation, and strategy backed by real product experience.",
         "email": "hello@vidyaforge.com",
         "address": {
           "@type": "PostalAddress",
@@ -43,7 +39,7 @@
           "addressRegion": "Bihar",
           "addressCountry": "IN"
         },
-        "sameAs": ["https://vendormate.in","https://gyansync.com"]
+        "sameAs": ["https://vendormate.in","https://gyansync.com","https://blog.vidyaforge.com"]
       },
       {
         "@type": "Organization",
@@ -51,689 +47,569 @@
         "name": "VidyaForge",
         "url": "https://vidyaforge.com",
         "founder": { "@id": "https://vidyaforge.com/#person" },
-        "description": "Founder-led digital systems studio for growing businesses.",
+        "description": "Founder-led digital systems studio — building in public.",
         "areaServed": "IN"
       }
     ]
   }
   </script>
 
-  <!-- Favicon — perfectly centred VF -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%2300c9a7'/><text x='50' y='50' font-size='52' font-family='sans-serif' font-weight='900' fill='%23070b14' text-anchor='middle' dominant-baseline='central'>VF</text></svg>" />
 
   <link rel="preconnect" href="https://api.fontshare.com" />
   <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800,900&f[]=satoshi@300,400,500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-  <!-- LOADER -->
-  <div class="loader" id="loader">
-    <div class="loader-inner">
-      <span class="loader-logo">VF</span>
-      <div class="loader-tagline">VidyaForge</div>
-      <div class="loader-bar"><div class="loader-fill"></div></div>
-    </div>
+<!-- LOADER -->
+<div class="loader" id="loader">
+  <div class="loader-inner">
+    <span class="loader-logo">VF</span>
+    <div class="loader-tagline">VidyaForge</div>
+    <div class="loader-bar"><div class="loader-fill"></div></div>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <a href="#hero" class="nav-brand">
+    <span class="brand-monogram">VB</span>
+    <span class="brand-name">VidyaForge</span>
+  </a>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#building" class="nav-link">Building</a></li>
+    <li><a href="#work"     class="nav-link">Work</a></li>
+    <li><a href="#proof"    class="nav-link">Proof</a></li>
+    <li><a href="#journal"  class="nav-link">Journal</a></li>
+    <li><a href="#contact"  class="nav-link">Connect</a></li>
+  </ul>
+
+  <div class="nav-actions">
+    <!-- UPDATE: Replace YOUR_NUMBER e.g. 919876543210 -->
+    <a href="https://wa.me/YOUR_NUMBER?text=Hi%20Vidya%2C%20I%20saw%20your%20website.%20I%20need%20help%20with%20"
+       target="_blank" rel="noopener" class="btn-whatsapp-nav">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      WhatsApp Me
+    </a>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+      <span class="toggle-icon sun">☀</span>
+      <span class="toggle-icon moon">◑</span>
+    </button>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<main>
+
+<!-- ============================================================
+     1. HERO — no form, breathing, founder-studio
+============================================================ -->
+<section class="hero" id="hero">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="grid-overlay"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
   </div>
 
-  <!-- NAVBAR -->
-  <nav class="navbar" id="navbar">
-    <a href="#hero" class="nav-brand">
-      <span class="brand-monogram">VB</span>
-      <span class="brand-name">VidyaForge</span>
-    </a>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#building"  class="nav-link">Building</a></li>
-      <li><a href="#services"  class="nav-link">Services</a></li>
-      <li><a href="#ventures"  class="nav-link">Ventures</a></li>
-      <li><a href="#about"     class="nav-link">About</a></li>
-      <li><a href="#insights"  class="nav-link">Blog</a></li>
-      <li><a href="#contact"   class="nav-link">Contact</a></li>
-    </ul>
-    <div class="nav-actions">
-      <!-- UPDATE: Replace YOUR_NUMBER e.g. 919876543210 -->
+  <div class="hero-inner">
+
+    <div class="hero-eyebrow reveal-up">
+      <span class="badge-dot"></span>
+      Founder-led digital systems studio · Building in public
+    </div>
+
+    <h1 class="hero-name reveal-up">
+      Vidya<br /><em>Bhushan</em>
+    </h1>
+
+    <div class="hero-roles reveal-up">
+      <span class="role-fixed">Founder &amp; CTO</span>
+      <span class="role-divider">/</span>
+      <span id="typingTarget" class="typing-text"></span><span class="typing-cursor">|</span>
+    </div>
+
+    <p class="hero-intro reveal-up">
+      I build digital systems that help businesses grow —
+      websites, automation, and strategy backed by real product experience.
+    </p>
+
+    <p class="hero-microcopy reveal-up">
+      Building quietly since 2021. Building publicly now.
+    </p>
+
+    <div class="hero-ctas reveal-up">
+      <!-- UPDATE: Replace YOUR_NUMBER -->
       <a href="https://wa.me/YOUR_NUMBER?text=Hi%20Vidya%2C%20I%20saw%20your%20website.%20I%20need%20help%20with%20"
-         target="_blank" rel="noopener" class="btn-whatsapp-nav">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        WhatsApp Me
+         target="_blank" rel="noopener" class="btn-whatsapp">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span class="btn-whatsapp-inner">
+          <span class="btn-whatsapp-label">WhatsApp Me</span>
+          <span class="btn-whatsapp-sub">Usually replies within a few hours</span>
+        </span>
       </a>
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-        <span class="toggle-icon sun">☀</span>
-        <span class="toggle-icon moon">◑</span>
-      </button>
-      <button class="hamburger" id="hamburger" aria-label="Open menu">
-        <span></span><span></span><span></span>
-      </button>
+      <a href="#building" class="btn btn-ghost">
+        See What I'm Building
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
     </div>
-  </nav>
 
-  <main>
-
-    <!-- ============================================================
-         1. HERO
-    ============================================================ -->
-    <section class="hero" id="hero">
-      <div class="hero-bg" aria-hidden="true">
-        <div class="grid-overlay"></div>
-        <div class="orb orb-1"></div>
-        <div class="orb orb-2"></div>
+    <!-- Live operating signals — replaces resume stats -->
+    <div class="hero-signals reveal-up">
+      <div class="signal-label">Currently:</div>
+      <div class="signal-item">
+        <span class="signal-dot active"></span>
+        Building VidyaForge Studio
       </div>
-
-      <div class="hero-content">
-        <div class="hero-left">
-          <div class="hero-badge reveal-up">
-            <span class="badge-dot"></span>
-            Available for new projects
-          </div>
-
-          <h1 class="hero-name reveal-up">
-            Vidya<br /><em>Bhushan</em>
-          </h1>
-
-          <div class="hero-roles reveal-up">
-            <span class="role-fixed">Founder · VidyaForge</span>
-            <span class="role-divider">/</span>
-            <span id="typingTarget" class="typing-text"></span><span class="typing-cursor">|</span>
-          </div>
-
-          <p class="hero-intro reveal-up">
-            Founder-led digital systems studio — helping businesses turn digital presence into real growth.
-            <span class="hero-qualifier">Not an agency. Not a freelancer. A builder who understands your business before touching the keyboard.</span>
-          </p>
-
-          <div class="hero-ctas reveal-up">
-            <!-- UPDATE: Replace YOUR_NUMBER -->
-            <a href="https://wa.me/YOUR_NUMBER?text=Hi%20Vidya%2C%20I%20saw%20your%20website.%20I%20need%20help%20with%20"
-               target="_blank" rel="noopener" class="btn-whatsapp">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              <span class="btn-whatsapp-inner">
-                <span class="btn-whatsapp-label">WhatsApp Me</span>
-                <span class="btn-whatsapp-sub">Usually replies within a few hours</span>
-              </span>
-            </a>
-            <a href="#building" class="btn btn-ghost">
-              See What I'm Building
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
-          </div>
-
-          <div class="hero-stats reveal-up">
-            <div class="stat">
-              <span class="stat-num">5+</span>
-              <span class="stat-label">Years Building</span>
-            </div>
-            <div class="stat-divider"></div>
-            <div class="stat">
-              <span class="stat-num">12+</span>
-              <span class="stat-label">Products Shipped</span>
-            </div>
-            <div class="stat-divider"></div>
-            <div class="stat">
-              <span class="stat-num">2</span>
-              <span class="stat-label">Active Ventures</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="hero-right reveal-up">
-          <div class="quick-contact-card">
-            <div class="qc-header">
-              <div class="qc-title"><span class="qc-dot"></span>Quick Connect</div>
-              <p class="qc-sub">Have a project in mind? Drop a line — I respond within 24 hrs.</p>
-            </div>
-            <form class="qc-form" id="quickForm" novalidate>
-              <div class="qc-field">
-                <input type="text" id="qcName" name="name" placeholder="Your name" required />
-              </div>
-              <div class="qc-field">
-                <input type="email" id="qcEmail" name="email" placeholder="Email address" required />
-              </div>
-              <div class="qc-field">
-                <select id="qcType" name="type">
-                  <option value="" disabled selected>I need help with...</option>
-                  <option value="website">Website / Digital Presence</option>
-                  <option value="seo">SEO &amp; Lead Generation</option>
-                  <option value="automation">Automation &amp; AI</option>
-                  <option value="strategy">Strategy &amp; Consulting</option>
-                  <option value="partnership">Partnership / Co-building</option>
-                  <option value="other">Something Else</option>
-                </select>
-              </div>
-              <div class="qc-field">
-                <textarea id="qcMessage" name="message" placeholder="Tell me what you're working on..." rows="3" required></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary btn-full">
-                <span class="btn-text">Send Message</span>
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2 11 13M22 2 15 22 11 13 2 9l20-7z"/></svg>
-              </button>
-              <div class="qc-status" id="qcStatus"></div>
-            </form>
-          </div>
-        </div>
+      <div class="signal-sep">·</div>
+      <div class="signal-item">
+        <span class="signal-dot active"></span>
+        Co-building VendorMate
       </div>
-
-      <a href="#building" class="scroll-indicator" aria-label="Scroll down">
-        <div class="scroll-line"></div>
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
-      </a>
-    </section>
-
-    <!-- ============================================================
-         2. CURRENTLY BUILDING — momentum strip
-    ============================================================ -->
-    <section class="building section" id="building">
-      <div class="container">
-        <div class="section-label reveal-up">Currently Building</div>
-        <h2 class="section-heading reveal-up">In<br /><em>motion.</em></h2>
-
-        <div class="building-grid reveal-up">
-
-          <div class="building-card building-card--studio">
-            <div class="building-card-top">
-              <span class="building-tag">Studio</span>
-              <div class="building-status live"><span class="status-dot"></span>Active</div>
-            </div>
-            <div class="building-name">VidyaForge</div>
-            <div class="building-line">Founder-led digital systems studio · services, products &amp; strategy for growing businesses.</div>
-            <div class="building-url">vidyaforge.com</div>
-          </div>
-
-          <div class="building-card building-card--venture">
-            <div class="building-card-top">
-              <span class="building-tag">Venture</span>
-              <div class="building-status live"><span class="status-dot"></span>Live</div>
-            </div>
-            <div class="building-name">VendorMate</div>
-            <div class="building-line">India's B2B contractor marketplace — trust, tech &amp; verified ground teams.</div>
-            <a href="https://vendormate.in" target="_blank" rel="noopener" class="building-url building-url--link">vendormate.in ↗</a>
-          </div>
-
-          <div class="building-card building-card--next">
-            <div class="building-card-top">
-              <span class="building-tag building-tag--dim">Next</span>
-              <div class="building-status wip"><span class="status-dot"></span>Stealth</div>
-            </div>
-            <div class="building-name">???</div>
-            <div class="building-line">Something new is being figured out. Building in public soon.</div>
-            <div class="building-url">coming soon</div>
-          </div>
-
-        </div>
+      <div class="signal-sep">·</div>
+      <div class="signal-item">
+        <span class="signal-dot dim"></span>
+        Select client systems via GyanSync
       </div>
-    </section>
+    </div>
 
-    <!-- ============================================================
-         3. SERVICES
-    ============================================================ -->
-    <section class="services section" id="services">
-      <div class="container">
-        <div class="section-label reveal-up">How I Help</div>
-        <h2 class="section-heading reveal-up">Services that<br /><em>move the needle.</em></h2>
+  </div>
 
-        <div class="services-grid">
+  <a href="#building" class="scroll-indicator" aria-label="Scroll down">
+    <div class="scroll-line"></div>
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+  </a>
+</section>
 
-          <!-- Card 1 — no number, icon only -->
-          <div class="service-card reveal-up" data-delay="0">
-            <div class="service-card-top">
-              <div class="service-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-              </div>
-            </div>
-            <h3>Website &amp; Digital Presence</h3>
-            <p>A website designed to convert visitors into enquiries — not just look good. Business sites, landing pages, and portfolios built for real results.</p>
-            <ul class="service-tags">
-              <li>Business Websites</li><li>Landing Pages</li><li>Portfolio Sites</li><li>Speed Optimisation</li>
-            </ul>
-            <a href="https://wa.me/YOUR_NUMBER?text=Hi%20Vidya%2C%20I%20need%20help%20with%20a%20website%20or%20digital%20presence."
-               target="_blank" rel="noopener" class="service-cta">
-              Start on WhatsApp
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            </a>
-          </div>
+<!-- ============================================================
+     2. CURRENTLY BUILDING
+============================================================ -->
+<section class="building section" id="building">
+  <div class="container">
+    <div class="section-label reveal-up">Currently Building</div>
+    <h2 class="section-heading reveal-up">Real products.<br /><em>Real stakes.</em></h2>
 
-          <!-- Card 2 -->
-          <div class="service-card reveal-up" data-delay="1">
-            <div class="service-card-top">
-              <div class="service-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-              </div>
-            </div>
-            <h3>Growth &amp; Lead Generation</h3>
-            <p>Simple systems that consistently bring you new leads. SEO, conversion-focused pages, and funnel thinking that turns traffic into actual business.</p>
-            <ul class="service-tags">
-              <li>Local SEO</li><li>Lead Funnels</li><li>Google Presence</li><li>Conversion Pages</li>
-            </ul>
-            <a href="https://wa.me/YOUR_NUMBER?text=Hi%20Vidya%2C%20I%20need%20help%20with%20SEO%20and%20lead%20generation."
-               target="_blank" rel="noopener" class="service-cta">
-              Start on WhatsApp
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            </a>
-          </div>
+    <div class="building-grid">
 
-          <!-- Card 3 — Most Popular badge inline top-right of icon row -->
-          <div class="service-card service-card--featured reveal-up" data-delay="2">
-            <div class="service-card-top">
-              <div class="service-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 6v6l4 2"/><path d="M18 2v4h4"/></svg>
-              </div>
-              <span class="service-badge">Most Popular</span>
-            </div>
-            <h3>Automation &amp; AI</h3>
-            <p>Automation that saves you hours every week. WhatsApp automation, AI-powered workflows, and smart tools that make your business run smoother without more staff.</p>
-            <ul class="service-tags">
-              <li>WhatsApp Automation</li><li>AI Tools Setup</li><li>Workflow Systems</li><li>Process Ops</li>
-            </ul>
-            <a href="https://wa.me/YOUR_NUMBER?text=Hi%20Vidya%2C%20I%20need%20help%20with%20automation%20and%20AI%20tools."
-               target="_blank" rel="noopener" class="service-cta">
-              Start on WhatsApp
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            </a>
-          </div>
-
-          <!-- Card 4 -->
-          <div class="service-card reveal-up" data-delay="3">
-            <div class="service-card-top">
-              <div class="service-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-              </div>
-            </div>
-            <h3>Strategy &amp; Consulting</h3>
-            <p>A clear digital roadmap so you stop guessing and start growing. Tech decisions, scaling advice, and honest guidance — not just what you want to hear.</p>
-            <ul class="service-tags">
-              <li>Digital Roadmap</li><li>Tech Decisions</li><li>Business Scaling</li><li>Advisory</li>
-            </ul>
-            <a href="https://wa.me/YOUR_NUMBER?text=Hi%20Vidya%2C%20I%20need%20strategy%20and%20consulting%20help."
-               target="_blank" rel="noopener" class="service-cta">
-              Start on WhatsApp
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            </a>
-          </div>
-
-        </div>
-
-        <!-- GyanSync footnote -->
-        <p class="services-note">
-          All services are executed through my agency,
-          <a href="https://gyansync.com" target="_blank" rel="noopener">GyanSync</a>
-          — studio thinking backed by a full execution team.
-        </p>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         4. VENTURES
-    ============================================================ -->
-    <section class="ventures section" id="ventures">
-      <div class="container">
-        <div class="section-label reveal-up">What I've Built</div>
-        <h2 class="section-heading reveal-up">Ventures &amp;<br /><em>products.</em></h2>
-
-        <div class="ventures-grid">
-
-          <div class="venture-card venture-card--featured reveal-up">
-            <div class="venture-header">
-              <div class="venture-meta">
-                <span class="venture-tag accent-tag">Featured</span>
-                <span class="venture-tag">Co-founder</span>
-              </div>
-              <div class="venture-status live"><span class="status-dot"></span>Live</div>
-            </div>
-            <h3 class="venture-title">VendorMate</h3>
-            <p class="venture-sub">India's B2B Contractor Marketplace</p>
-            <p class="venture-desc">India's premier 'Private GeM' platform — connecting corporate clients with verified ground teams for tenders, projects, and outsourcing. Organizing Bharat's execution market using trust and technology.</p>
-            <div class="venture-pillars">
-              <div class="pillar">
-                <span class="pillar-label">Problem</span>
-                <p>Fragmented execution ecosystem, unreliable contractors, payment disputes across India's B2B market.</p>
-              </div>
-              <div class="pillar">
-                <span class="pillar-label">Solution</span>
-                <p>Direct connections with verified teams — trust scores, escrow, and real-time tracking built in.</p>
-              </div>
-            </div>
-            <div class="venture-footer">
-              <div class="venture-tech"><span>React</span><span>Node.js</span><span>PostgreSQL</span><span>AWS</span></div>
-              <a href="https://vendormate.in/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
-                View Project
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              </a>
-            </div>
-          </div>
-
-          <div class="venture-card reveal-up">
-            <div class="venture-header">
-              <div class="venture-meta">
-                <span class="venture-tag">Agency</span>
-                <span class="venture-tag">Founder</span>
-              </div>
-              <div class="venture-status live"><span class="status-dot"></span>Live</div>
-            </div>
-            <h3 class="venture-title">GyanSync</h3>
-            <p class="venture-sub">Digital Agency</p>
-            <p class="venture-desc">The agency through which all client services are delivered. Web development, digital marketing, automation, and growth systems for businesses ready to scale.</p>
-            <div class="venture-footer">
-              <div class="venture-tech"><span>Web Dev</span><span>Marketing</span><span>Automation</span></div>
-              <a href="https://gyansync.com/" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">
-                Visit Agency
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              </a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         5. ABOUT
-    ============================================================ -->
-    <section class="about section" id="about">
-      <div class="container">
-        <div class="about-grid">
-          <div class="about-left reveal-up">
-            <div class="section-label">About</div>
-            <h2 class="section-heading">
-              Not just a service provider.<br />
-              <em>Someone who's built real products.</em>
-            </h2>
-            <div class="about-story">
-              <p>I didn't start at a whiteboard. I started on the ground — managing projects, coordinating vendors, watching execution break at the last mile because the right tools didn't exist. That gap became my obsession.</p>
-              <p>From Project Manager to Web Developer to Co-founder, every step was deliberate. Today I run <strong>VendorMate</strong>, India's B2B contractor marketplace, and <strong>GyanSync</strong>, a digital agency delivering real results for businesses across India.</p>
-              <p>I think in systems. I ship in sprints. And I believe the difference between a freelancer and a partner is whether they understand your business before touching the keyboard.</p>
-            </div>
-            <div class="about-highlights">
-              <div class="highlight"><span class="highlight-icon">◈</span><span>5+ years building real products, not just websites</span></div>
-              <div class="highlight"><span class="highlight-icon">◈</span><span>Execution-first — I've built and scaled from zero</span></div>
-              <div class="highlight"><span class="highlight-icon">◈</span><span>AI &amp; automation embedded in everything I build</span></div>
-            </div>
-          </div>
-          <div class="about-right reveal-up">
-            <div class="aside-card">
-              <div class="aside-label">Currently</div>
-              <div class="aside-value">Co-founder @ VendorMate</div>
-              <div class="aside-sub">India's B2B Contractor Marketplace</div>
-            </div>
-            <div class="aside-card">
-              <div class="aside-label">Also running</div>
-              <div class="aside-value">GyanSync Agency</div>
-              <div class="aside-sub">Where client work gets executed</div>
-            </div>
-            <div class="aside-card">
-              <div class="aside-label">Based in</div>
-              <div class="aside-value">Patna, Bihar · India</div>
-            </div>
-            <div class="aside-card">
-              <div class="aside-label">Open to</div>
-              <div class="aside-value">Client projects, partnerships &amp; advisory</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         6. EXPERIENCE
-    ============================================================ -->
-    <section class="experience section" id="experience">
-      <div class="container">
-        <div class="section-label reveal-up">Experience</div>
-        <h2 class="section-heading reveal-up">The path<br /><em>here.</em></h2>
-        <div class="timeline">
-
-          <div class="timeline-item reveal-up">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <div class="timeline-header">
-                <div>
-                  <h3 class="timeline-role">Co-founder &amp; CTO</h3>
-                  <span class="timeline-company">VendorMate · GyanSync</span>
-                </div>
-                <span class="timeline-period">2023 — Present</span>
-              </div>
-              <p class="timeline-desc">Building India's B2B contractor marketplace from zero — architecture, product, team, and GTM. Simultaneously running GyanSync to deliver digital services for clients.</p>
-              <ul class="timeline-achievements">
-                <li>Designed and shipped the VendorMate marketplace MVP end-to-end</li>
-                <li>Built contractor verification and AI matching systems</li>
-                <li>Delivering client web, marketing and automation projects via GyanSync</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="timeline-item reveal-up">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <div class="timeline-header">
-                <div>
-                  <h3 class="timeline-role">Project Manager</h3>
-                  <span class="timeline-company">Global Lancers</span>
-                </div>
-                <span class="timeline-period">2021 — 2023</span>
-              </div>
-              <p class="timeline-desc">Managed complex B2B project delivery across distributed teams. Gained deep insight into execution gaps in outsourcing — the insight that later became VendorMate.</p>
-              <ul class="timeline-achievements">
-                <li>Delivered 20+ client projects across verticals</li>
-                <li>Reduced delivery time by 30% through process automation</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="timeline-item reveal-up">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <div class="timeline-header">
-                <div>
-                  <h3 class="timeline-role">Web Developer</h3>
-                  <span class="timeline-company">Veda Junction</span>
-                </div>
-                <span class="timeline-period">2019 — 2021</span>
-              </div>
-              <p class="timeline-desc">Built web products for clients across education and services sectors. Learned how to turn requirements into functional, user-friendly digital products.</p>
-              <ul class="timeline-achievements">
-                <li>Built client-facing platforms used by thousands of users</li>
-                <li>Led frontend architecture for key product launches</li>
-              </ul>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         7. INSIGHTS / BLOG
-    ============================================================ -->
-    <section class="insights section" id="insights">
-      <div class="container">
-        <div class="section-label reveal-up">Blog</div>
-        <div class="insights-header reveal-up">
-          <h2 class="section-heading">Thinking out<br /><em>loud.</em></h2>
-          <div class="insights-meta">
-            <p class="insights-sub">Practical writing on building, growth, and digital systems for Indian businesses. No fluff.</p>
-            <a href="https://blog.vidyaforge.com" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">
-              Read on Blog
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </a>
-          </div>
-        </div>
-        <div class="insights-grid">
-
-          <article class="insight-card reveal-up" data-published="false">
-            <div class="insight-inner">
-              <div class="insight-meta-row"><span class="insight-tag">Product</span></div>
-              <div class="insight-body">
-                <h3>Why India's B2B Market Needs a Trust Layer Before a Tech Layer</h3>
-                <p>The biggest bottleneck in India's contractor economy isn't technology — it's verification. Here's how we're solving it at VendorMate.</p>
-              </div>
-              <div class="insight-footer">
-                <div class="insight-read-time">8 min read</div>
-                <a href="https://blog.vidyaforge.com/why-india-s-b2b-market-needs-a-trust-layer-before-a-tech-layer" target="_blank" rel="noopener" class="insight-cta blog-cta">
-                  <span>Read full Article</span>
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <article class="insight-card reveal-up" data-published="false">
-            <div class="insight-inner">
-              <div class="insight-meta-row"><span class="insight-tag">Growth</span></div>
-              <div class="insight-body">
-                <h3>How Small Businesses Lose Clients Before the First Call</h3>
-                <p>Most business enquiries die in the first 5 minutes. Here's the digital leak that's costing you leads — and how to fix it this week.</p>
-              </div>
-              <div class="insight-footer">
-                <div class="insight-read-time">6 min read</div>
-                <a href="https://blog.vidyaforge.com/how-small-businesses-lose-clients-before-the-first-call" target="_blank" rel="noopener" class="insight-cta blog-cta">
-                  <span>Read full Article</span>
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <article class="insight-card reveal-up" data-published="false">
-            <div class="insight-inner">
-              <div class="insight-meta-row"><span class="insight-tag">Founder</span></div>
-              <div class="insight-body">
-                <h3>What I Learned Building VendorMate from Zero</h3>
-                <p>From idea to live product — the real story of what worked, what broke, and what I'd do differently building India's B2B marketplace.</p>
-              </div>
-              <div class="insight-footer">
-                <div class="insight-read-time">10 min read</div>
-                <a href="https://blog.vidyaforge.com/what-i-learned-building-vendormate-from-zero" target="_blank" rel="noopener" class="insight-cta blog-cta">
-                  <span>Read full Article</span>
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </a>
-              </div>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         8. CONTACT
-    ============================================================ -->
-    <section class="contact section" id="contact">
-      <div class="container">
-        <div class="section-label reveal-up">Work With Me</div>
-        <div class="contact-grid">
-
-          <div class="contact-left reveal-up">
-            <h2 class="section-heading">Let's build<br /><em>something real.</em></h2>
-            <p class="contact-intro">Whether you need a website, SEO, automation, or just an honest conversation about your digital strategy — I'm reachable. Best suited for businesses serious about improving their digital presence.</p>
-
-            <a href="https://wa.me/YOUR_NUMBER?text=Hi%20Vidya%2C%20I%20saw%20your%20website.%20I%20need%20help%20with%20"
-               target="_blank" rel="noopener" class="whatsapp-cta-big">
-              <div class="wca-icon">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              </div>
-              <div class="wca-text">
-                <span class="wca-label">WhatsApp — fastest response</span>
-                <span class="wca-sub">Usually replies within a few hours</span>
-              </div>
-              <svg class="wca-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
-
-            <div class="contact-links">
-              <a href="mailto:hello@vidyaforge.com" class="contact-link">
-                <span class="contact-link-icon">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                </span>
-                <div><div class="cl-label">Email</div><div class="cl-value">hello@vidyaforge.com</div></div>
-              </a>
-              <a href="https://vendormate.in" target="_blank" rel="noopener" class="contact-link">
-                <span class="contact-link-icon">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
-                </span>
-                <div><div class="cl-label">Venture</div><div class="cl-value">vendormate.in</div></div>
-              </a>
-              <a href="https://gyansync.com" target="_blank" rel="noopener" class="contact-link">
-                <span class="contact-link-icon">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 17.5h7M17.5 14v7"/></svg>
-                </span>
-                <div><div class="cl-label">Agency</div><div class="cl-value">gyansync.com</div></div>
-              </a>
-            </div>
-          </div>
-
-          <div class="contact-right reveal-up">
-            <form class="contact-form" id="contactForm" novalidate>
-              <div class="cf-heading">Send a detailed message</div>
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="cfName">Name</label>
-                  <input type="text" id="cfName" name="name" placeholder="Your name" required />
-                </div>
-                <div class="form-group">
-                  <label for="cfEmail">Email</label>
-                  <input type="email" id="cfEmail" name="email" placeholder="your@email.com" required />
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="cfService">I need help with</label>
-                <select id="cfService" name="service">
-                  <option value="" disabled selected>Choose a service...</option>
-                  <option value="website">Website / Digital Presence</option>
-                  <option value="seo">SEO &amp; Lead Generation</option>
-                  <option value="automation">Automation &amp; AI</option>
-                  <option value="strategy">Strategy &amp; Consulting</option>
-                  <option value="partnership">Partnership / Co-building</option>
-                  <option value="other">Something Else</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="cfMessage">Message</label>
-                <textarea id="cfMessage" name="message" rows="5" placeholder="Tell me about your business and what you're trying to achieve..." required></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary btn-full">
-                <span class="btn-text">Send Message</span>
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2 11 13M22 2 15 22 11 13 2 9l20-7z"/></svg>
-              </button>
-              <div class="form-status" id="formStatus"></div>
-            </form>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-inner">
-        <div class="footer-brand">
-          <span class="brand-monogram">VB</span>
+      <!-- VendorMate — primary, featured -->
+      <div class="build-card build-card--featured reveal-up">
+        <div class="build-card-header">
           <div>
-            <div class="footer-name">Vidya Bhushan</div>
-            <div class="footer-tagline">Founder-led digital systems studio · Patna, India</div>
+            <div class="build-name">VendorMate</div>
+            <div class="build-sub">India's B2B Contractor Marketplace</div>
+          </div>
+          <div class="build-status live"><span class="status-dot"></span>Live</div>
+        </div>
+        <p class="build-desc">India's premier 'Private GeM' platform — connecting corporate clients with verified ground teams for tenders, projects, and outsourcing. Organizing Bharat's execution market using trust and technology.</p>
+        <div class="build-pillars">
+          <div class="build-pillar">
+            <span class="pillar-label">Problem</span>
+            <p>Fragmented execution ecosystem, unreliable contractors, payment disputes across India's B2B market.</p>
+          </div>
+          <div class="build-pillar">
+            <span class="pillar-label">Built</span>
+            <p>Trust scores, escrow, AI matching, and real-time contractor verification at scale.</p>
           </div>
         </div>
-        <nav class="footer-nav" aria-label="Footer navigation">
-          <a href="#building">Building</a>
-          <a href="#services">Services</a>
-          <a href="#ventures">Ventures</a>
-          <a href="#about">About</a>
-          <a href="#insights">Blog</a>
-          <a href="#contact">Contact</a>
-        </nav>
-        <div class="footer-links">
-          <a href="https://vendormate.in" target="_blank" rel="noopener">VendorMate ↗</a>
-          <a href="https://gyansync.com" target="_blank" rel="noopener">GyanSync ↗</a>
-          <a href="https://blog.vidyaforge.com" target="_blank" rel="noopener">Blog ↗</a>
+        <div class="build-footer">
+          <div class="build-tech"><span>React</span><span>Node.js</span><span>PostgreSQL</span><span>AWS</span></div>
+          <a href="https://vendormate.in/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+            View Project
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
         </div>
       </div>
-      <div class="footer-bottom">
-        <span>© <span id="footerYear"></span> Vidya Bhushan · VidyaForge · Patna, Bihar, India</span>
-        <span>Built with precision, not templates.</span>
+
+      <!-- Right column: VidyaForge + GyanSync stacked -->
+      <div class="build-col-right">
+
+        <div class="build-card build-card--self reveal-up">
+          <div class="build-card-header">
+            <div>
+              <div class="build-name">VidyaForge</div>
+              <div class="build-sub">This Studio</div>
+            </div>
+            <div class="build-status live"><span class="status-dot"></span>Active</div>
+          </div>
+          <p class="build-desc">Founder-led digital systems studio — building in public, documenting the journey, helping businesses grow through real execution and honest advice.</p>
+          <div class="build-tags-row">
+            <span class="build-tag">Studio</span>
+            <span class="build-tag">Founder</span>
+            <span class="build-tag">Build in Public</span>
+          </div>
+        </div>
+
+        <!-- GyanSync — visually subordinate -->
+        <div class="build-card build-card--agency reveal-up">
+          <div class="build-card-header">
+            <div>
+              <div class="build-name build-name--sub">GyanSync</div>
+              <div class="build-sub">Digital Agency · Execution Arm</div>
+            </div>
+            <div class="build-status live"><span class="status-dot"></span>Live</div>
+          </div>
+          <p class="build-desc-sm">All client services — web, marketing, automation — are delivered through GyanSync. You work with me. Execution runs through the studio.</p>
+          <a href="https://gyansync.com/" target="_blank" rel="noopener" class="build-link">gyansync.com ↗</a>
+        </div>
+
       </div>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <script src="script.js"></script>
+<!-- ============================================================
+     3. HOW I HELP (renamed from Services/Systems)
+============================================================ -->
+<section class="work section" id="work">
+  <div class="container">
+    <div class="section-label reveal-up">How I Help</div>
+    <div class="work-header reveal-up">
+      <h2 class="section-heading">Work that<br /><em>moves the needle.</em></h2>
+      <p class="work-sub">I don't sell services. I build systems. The difference: a service ends when you stop paying. A system keeps working.</p>
+    </div>
+
+    <div class="work-grid">
+
+      <div class="work-card reveal-up" data-delay="0">
+        <div class="work-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <h3>Website &amp; Digital Presence</h3>
+        <p>A website designed to convert visitors into enquiries — not just look good. Built for results.</p>
+        <ul class="work-tags">
+          <li>Business Websites</li><li>Landing Pages</li><li>Portfolio Sites</li><li>Speed Optimisation</li>
+        </ul>
+        <a href="https://wa.me/YOUR_NUMBER?text=Hi%20Vidya%2C%20I%20need%20help%20with%20a%20website." target="_blank" rel="noopener" class="work-cta">
+          Start on WhatsApp
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+      </div>
+
+      <div class="work-card reveal-up" data-delay="1">
+        <div class="work-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <h3>Growth &amp; Lead Generation</h3>
+        <p>Simple systems that consistently bring you new leads. SEO and funnel thinking that turns traffic into actual business.</p>
+        <ul class="work-tags">
+          <li>Local SEO</li><li>Lead Funnels</li><li>Google Presence</li><li>Conversion Pages</li>
+        </ul>
+        <a href="https://wa.me/YOUR_NUMBER?text=Hi%20Vidya%2C%20I%20need%20help%20with%20SEO%20and%20leads." target="_blank" rel="noopener" class="work-cta">
+          Start on WhatsApp
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+      </div>
+
+      <div class="work-card work-card--featured reveal-up" data-delay="2">
+        <div class="work-icon-row">
+          <div class="work-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 6v6l4 2"/><path d="M18 2v4h4"/></svg>
+          </div>
+          <div class="work-badge">Most Popular</div>
+        </div>
+        <h3>Automation &amp; AI</h3>
+        <p>Automation that saves you hours every week. WhatsApp automation, AI-powered workflows, and smart tools that make your business run smoother without more staff.</p>
+        <ul class="work-tags">
+          <li>WhatsApp Automation</li><li>AI Tools Setup</li><li>Workflow Systems</li><li>Process Ops</li>
+        </ul>
+        <a href="https://wa.me/YOUR_NUMBER?text=Hi%20Vidya%2C%20I%20need%20help%20with%20automation%20and%20AI." target="_blank" rel="noopener" class="work-cta">
+          Start on WhatsApp
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+      </div>
+
+      <div class="work-card reveal-up" data-delay="3">
+        <div class="work-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        </div>
+        <h3>Strategy &amp; Consulting</h3>
+        <p>A clear digital roadmap so you stop guessing and start growing. Honest guidance — not just what you want to hear.</p>
+        <ul class="work-tags">
+          <li>Digital Roadmap</li><li>Tech Decisions</li><li>Business Scaling</li><li>Advisory</li>
+        </ul>
+        <a href="https://wa.me/YOUR_NUMBER?text=Hi%20Vidya%2C%20I%20need%20strategy%20and%20consulting%20help." target="_blank" rel="noopener" class="work-cta">
+          Start on WhatsApp
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     4. PROOF — Built Real + Experience merged
+============================================================ -->
+<section class="proof section" id="proof">
+  <div class="container">
+    <div class="proof-grid">
+
+      <div class="proof-left reveal-up">
+        <div class="section-label">The Proof</div>
+        <h2 class="section-heading">
+          I don't just advise.<br />
+          <em>I build and ship.</em>
+        </h2>
+        <div class="proof-story">
+          <p>My career didn't start at a whiteboard. It started on the ground — managing projects, coordinating vendors, watching execution break at the last mile. That gap became my obsession.</p>
+          <p>From Project Manager to Web Developer to Founder, every step was deliberate. Today I run <strong>VendorMate</strong>, India's B2B contractor marketplace, and <strong>GyanSync</strong>, delivering real results for businesses across India.</p>
+          <p>I think in systems. I ship in sprints. And I believe the difference between a freelancer and a real partner is whether they understand your business before they touch a keyboard.</p>
+        </div>
+        <div class="proof-highlights">
+          <div class="proof-highlight"><span class="ph-icon">◈</span><span>5+ years building real products, not just websites</span></div>
+          <div class="proof-highlight"><span class="ph-icon">◈</span><span>Founder-first — built and scaled from zero myself</span></div>
+          <div class="proof-highlight"><span class="ph-icon">◈</span><span>AI &amp; automation embedded in everything I build</span></div>
+          <div class="proof-highlight"><span class="ph-icon">◈</span><span>Building in public — follow the real journey</span></div>
+        </div>
+
+        <!-- Condensed timeline inside Proof -->
+        <div class="proof-timeline">
+          <div class="pt-item">
+            <div class="pt-dot"></div>
+            <div class="pt-content">
+              <div class="pt-role">Founder &amp; CTO <span class="pt-company">· VidyaForge · VendorMate · GyanSync</span></div>
+              <div class="pt-period">2023 — Present</div>
+              <p class="pt-desc">Building India's B2B contractor marketplace from zero. Running VidyaForge as a founder-led studio. Delivering client work through GyanSync.</p>
+            </div>
+          </div>
+          <div class="pt-item">
+            <div class="pt-dot"></div>
+            <div class="pt-content">
+              <div class="pt-role">Project Manager <span class="pt-company">· Global Lancers</span></div>
+              <div class="pt-period">2021 — 2023</div>
+              <p class="pt-desc">Managed complex B2B project delivery. Discovered the execution gap that became VendorMate.</p>
+            </div>
+          </div>
+          <div class="pt-item">
+            <div class="pt-dot"></div>
+            <div class="pt-content">
+              <div class="pt-role">Web Developer <span class="pt-company">· Veda Junction</span></div>
+              <div class="pt-period">2019 — 2021</div>
+              <p class="pt-desc">Built web products for education and services sectors. Learned the craft of turning requirements into real products.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="proof-right reveal-up">
+        <!-- Quick facts -->
+        <div class="proof-facts">
+          <div class="proof-fact">
+            <div class="pf-label">Currently Building</div>
+            <div class="pf-value">VendorMate</div>
+            <div class="pf-sub">India's B2B Contractor Marketplace</div>
+          </div>
+          <div class="proof-fact">
+            <div class="pf-label">Running</div>
+            <div class="pf-value">GyanSync Agency</div>
+            <div class="pf-sub">Execution arm for all client work</div>
+          </div>
+          <div class="proof-fact">
+            <div class="pf-label">Writing at</div>
+            <div class="pf-value">blog.vidyaforge.com</div>
+            <div class="pf-sub">Field Notes · Build in public</div>
+          </div>
+          <div class="proof-fact">
+            <div class="pf-label">Based in</div>
+            <div class="pf-value">Patna, Bihar · India</div>
+          </div>
+          <div class="proof-fact">
+            <div class="pf-label">Open to</div>
+            <div class="pf-value">Projects, partnerships &amp; advisory</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     6. JOURNAL — renamed from Blog
+     TO ADD ARTICLE: set data-published="true", update href + content
+============================================================ -->
+<section class="journal section" id="journal">
+  <div class="container">
+    <div class="section-label reveal-up">Field Notes</div>
+    <div class="journal-header reveal-up">
+      <h2 class="section-heading">Thinking out<br /><em>loud.</em></h2>
+      <div class="journal-meta">
+        <p class="journal-sub">Practical writing on building, growth, and digital systems for Indian businesses. No fluff. Just what I'm actually learning.</p>
+        <a href="https://blog.vidyaforge.com" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">
+          Read on Blog
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="journal-grid">
+      <article class="journal-card reveal-up" data-published="false">
+        <div class="journal-inner">
+          <div class="journal-meta-row"><span class="journal-tag">Product</span></div>
+          <div class="journal-body">
+            <h3>Why India's B2B Market Needs a Trust Layer Before a Tech Layer</h3>
+            <p>The biggest bottleneck in India's contractor economy isn't technology — it's verification. Here's how we're solving it at VendorMate.</p>
+          </div>
+          <div class="journal-footer">
+            <div class="journal-read-time">8 min read</div>
+            <a href="https://blog.vidyaforge.com/why-india-s-b2b-market-needs-a-trust-layer-before-a-tech-layer" target="_blank" rel="noopener" class="journal-cta">
+              Read Article <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="journal-card reveal-up" data-published="false">
+        <div class="journal-inner">
+          <div class="journal-meta-row"><span class="journal-tag">Growth</span></div>
+          <div class="journal-body">
+            <h3>How Small Businesses Lose Clients Before the First Call</h3>
+            <p>Most business enquiries die in the first 5 minutes. Here's the digital leak that's costing you leads — and how to fix it this week.</p>
+          </div>
+          <div class="journal-footer">
+            <div class="journal-read-time">6 min read</div>
+            <a href="https://blog.vidyaforge.com/how-small-businesses-lose-clients-before-the-first-call" target="_blank" rel="noopener" class="journal-cta">
+              Read Article <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="journal-card reveal-up" data-published="false">
+        <div class="journal-inner">
+          <div class="journal-meta-row"><span class="journal-tag">Founder</span></div>
+          <div class="journal-body">
+            <h3>What I Learned Building VendorMate from Zero</h3>
+            <p>From idea to live product — the real story of what worked, what broke, and what I'd do differently.</p>
+          </div>
+          <div class="journal-footer">
+            <div class="journal-read-time">10 min read</div>
+            <a href="https://blog.vidyaforge.com/what-i-learned-building-vendormate-from-zero" target="_blank" rel="noopener" class="journal-cta">
+              Read Article <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     7. CONTACT
+============================================================ -->
+<section class="contact section" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-left reveal-up">
+        <div class="section-label">Connect</div>
+        <h2 class="section-heading">Let's build<br /><em>something real.</em></h2>
+        <p class="contact-intro">Whether you need a website, SEO, automation, or a straight conversation about your digital strategy — I'm reachable. Best suited for businesses serious about turning their digital presence into actual growth.</p>
+
+        <!-- UPDATE: Replace YOUR_NUMBER -->
+        <a href="https://wa.me/YOUR_NUMBER?text=Hi%20Vidya%2C%20I%20saw%20your%20website.%20I%20need%20help%20with%20"
+           target="_blank" rel="noopener" class="whatsapp-cta-big">
+          <div class="wca-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </div>
+          <div class="wca-text">
+            <span class="wca-label">WhatsApp — fastest response</span>
+            <span class="wca-sub">Usually replies within a few hours</span>
+          </div>
+          <svg class="wca-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+
+        <div class="contact-links">
+          <a href="mailto:hello@vidyaforge.com" class="contact-link">
+            <span class="contact-link-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></span>
+            <div><div class="cl-label">Email</div><div class="cl-value">hello@vidyaforge.com</div></div>
+          </a>
+          <a href="https://vendormate.in" target="_blank" rel="noopener" class="contact-link">
+            <span class="contact-link-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></span>
+            <div><div class="cl-label">Venture</div><div class="cl-value">vendormate.in</div></div>
+          </a>
+          <a href="https://blog.vidyaforge.com" target="_blank" rel="noopener" class="contact-link">
+            <span class="contact-link-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></span>
+            <div><div class="cl-label">Field Notes</div><div class="cl-value">blog.vidyaforge.com</div></div>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-right reveal-up">
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="cf-heading">Send a detailed message</div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cfName">Name</label>
+              <input type="text" id="cfName" name="name" placeholder="Your name" required />
+            </div>
+            <div class="form-group">
+              <label for="cfEmail">Email</label>
+              <input type="email" id="cfEmail" name="email" placeholder="your@email.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="cfService">I need help with</label>
+            <select id="cfService" name="service">
+              <option value="" disabled selected>Choose a service...</option>
+              <option value="website">Website / Digital Presence</option>
+              <option value="seo">SEO &amp; Lead Generation</option>
+              <option value="automation">Automation &amp; AI</option>
+              <option value="strategy">Strategy &amp; Consulting</option>
+              <option value="partnership">Partnership / Co-building</option>
+              <option value="other">Something Else</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="cfMessage">Message</label>
+            <textarea id="cfMessage" name="message" rows="5" placeholder="Tell me about your business and what you're trying to achieve..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <span class="btn-text">Send Message</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2 11 13M22 2 15 22 11 13 2 9l20-7z"/></svg>
+          </button>
+          <div class="form-status" id="formStatus"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="brand-monogram">VB</span>
+        <div>
+          <div class="footer-name">Vidya Bhushan</div>
+          <div class="footer-tagline">Systems for growth. Built in public.</div>
+        </div>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="#building">Building</a>
+        <a href="#work">Work</a>
+        <a href="#proof">Proof</a>
+        <a href="#journal">Journal</a>
+        <a href="#contact">Connect</a>
+      </nav>
+      <div class="footer-links">
+        <a href="https://vendormate.in"     target="_blank" rel="noopener">VendorMate ↗</a>
+        <a href="https://gyansync.com"      target="_blank" rel="noopener">GyanSync ↗</a>
+        <a href="https://blog.vidyaforge.com" target="_blank" rel="noopener">Journal ↗</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="footerYear"></span> Vidya Bhushan · VidyaForge · Patna, Bihar, India</span>
+      <span>Founder-led digital systems studio.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
