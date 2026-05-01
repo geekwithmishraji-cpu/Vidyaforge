@@ -169,20 +169,6 @@ function submitForm(form, statusEl, fields) {
 }
 
 /* ----------------------------------------------------------------
-   QUICK CONTACT FORM (hero)
----------------------------------------------------------------- */
-document.getElementById('quickForm')?.addEventListener('submit', e => {
-  e.preventDefault();
-  const form = e.target;
-  submitForm(form, document.getElementById('qcStatus'), {
-    name:    form.querySelector('#qcName')?.value.trim(),
-    email:   form.querySelector('#qcEmail')?.value.trim(),
-    type:    form.querySelector('#qcType')?.value,
-    message: form.querySelector('#qcMessage')?.value.trim(),
-  });
-});
-
-/* ----------------------------------------------------------------
    CONTACT FORM (contact section)
 ---------------------------------------------------------------- */
 document.getElementById('contactForm')?.addEventListener('submit', e => {
