@@ -789,11 +789,11 @@ select { font-family: inherit; }
   background: var(--whatsapp); color: #ffffff; border-radius: var(--radius-md);
   padding: 1.1rem 1.4rem; margin-bottom: 1.5rem;
   transition: all var(--dur-fast);
-  box-shadow: 0 3px 12px var(--whatsapp-glow); /* reduced from 0 4px 16px */
+  box-shadow: 0 2px 8px var(--whatsapp-glow); /* reduced from 0 4px 16px */
 }
 .whatsapp-cta-big:hover {
   transform: translateY(-2px);
-  box-shadow: 0 5px 18px var(--whatsapp-glow); /* reduced */
+  box-shadow: 0 4px 16px var(--whatsapp-glow); /* reduced */
 }
 .wca-icon {
   width: 46px; height: 46px; background: rgba(255,255,255,0.15);
