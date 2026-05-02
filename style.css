@@ -35,11 +35,11 @@
   --accent:       #00c9a7;
   --accent-light: #00e8c2;
   --accent-dim:   rgba(0,201,167,0.08);
-  --accent-glow:  rgba(0,201,167,0.14);   /* reduced from 0.20 */
+  --accent-glow:  rgba(0,201,167,0.14);
 
   --whatsapp:      #25d366;
   --whatsapp-dim:  rgba(37,211,102,0.09);
-  --whatsapp-glow: rgba(37,211,102,0.13); /* reduced from 0.18 */
+  --whatsapp-glow: rgba(0,0,0,0); /* FIXED: glow disabled */
 
   --amber:     #f5a623;
   --amber-dim: rgba(245,166,35,0.08);
@@ -49,7 +49,7 @@
   --border-accent: rgba(0,201,167,0.16);
 
   --shadow-card: 0 4px 20px rgba(0,0,0,0.45);
-  --shadow-glow: 0 0 28px rgba(0,201,167,0.07); /* reduced from 0.10 */
+  --shadow-glow: 0 0 28px rgba(0,201,167,0.07);
 }
 
 /* LIGHT */
@@ -66,11 +66,11 @@
   --accent:       #00a98a;
   --accent-light: #00c9a7;
   --accent-dim:   rgba(0,169,138,0.07);
-  --accent-glow:  rgba(0,169,138,0.10); /* reduced */
+  --accent-glow:  rgba(0,169,138,0.10);
 
   --whatsapp:      #128c7e;
   --whatsapp-dim:  rgba(18,140,126,0.07);
-  --whatsapp-glow: rgba(18,140,126,0.12); /* reduced */
+  --whatsapp-glow: rgba(0,0,0,0); /* FIXED: glow disabled */
 
   --amber:     #d4860f;
   --amber-dim: rgba(212,134,15,0.08);
@@ -80,7 +80,7 @@
   --border-accent: rgba(0,169,138,0.15);
 
   --shadow-card: 0 2px 18px rgba(0,0,0,0.055);
-  --shadow-glow: 0 0 20px rgba(0,169,138,0.06); /* reduced */
+  --shadow-glow: 0 0 20px rgba(0,169,138,0.06);
 }
 
 /* ----------------------------------------------------------------
@@ -205,17 +205,17 @@ select { font-family: inherit; }
 .nav-link:hover, .nav-link.active { color: var(--text-primary); }
 .nav-actions { display: flex; align-items: center; gap: 0.65rem; }
 
-/* FIX: Reduced WhatsApp button glow on nav */
+/* FIXED: Nav WhatsApp button — no green glow */
 .btn-whatsapp-nav {
   display: flex; align-items: center; gap: 6px;
   font-size: 0.78rem; font-weight: 600; color: #fff;
   background: var(--whatsapp); padding: 0.38rem 0.9rem;
   border-radius: var(--radius-full); transition: all var(--dur-fast);
-  box-shadow: 0 2px 8px var(--whatsapp-glow); /* reduced */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25); /* FIXED: hardcoded dark shadow */
 }
 .btn-whatsapp-nav:hover {
   transform: translateY(-1px);
-  box-shadow: 0 3px 12px var(--whatsapp-glow); /* reduced */
+  box-shadow: 0 3px 12px rgba(0,0,0,0.32); /* FIXED: hardcoded dark shadow */
 }
 
 .theme-toggle {
@@ -261,7 +261,7 @@ select { font-family: inherit; }
 }
 .btn-primary:hover {
   background: var(--accent-light);
-  box-shadow: 0 3px 14px var(--accent-glow); /* reduced */
+  box-shadow: 0 3px 14px var(--accent-glow);
   transform: translateY(-1px);
 }
 .btn-ghost { background: transparent; color: var(--text-primary); border-color: var(--border-strong); }
@@ -269,18 +269,18 @@ select { font-family: inherit; }
 .btn-sm { font-size: 0.78rem; padding: 0.44rem 0.95rem; }
 .btn-full { width: 100%; justify-content: center; }
 
-/* FIX: Reduced WhatsApp main button glow significantly */
+/* FIXED: Hero WhatsApp button — no green glow */
 .btn-whatsapp {
   display: inline-flex; align-items: center; gap: 10px;
   background: var(--whatsapp); color: #fff; border: none;
   border-radius: var(--radius-full); padding: 0.75rem 1.4rem;
   font-weight: 600; transition: all var(--dur-fast);
-  box-shadow: 0 2px 10px var(--whatsapp-glow); /* much reduced */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.25); /* FIXED: hardcoded dark shadow */
   white-space: nowrap;
 }
 .btn-whatsapp:hover {
   background: #20c05c;
-  box-shadow: 0 4px 16px var(--whatsapp-glow); /* reduced */
+  box-shadow: 0 4px 16px rgba(0,0,0,0.32); /* FIXED: hardcoded dark shadow */
   transform: translateY(-1px);
 }
 .btn-whatsapp-inner { display: flex; flex-direction: column; align-items: flex-start; gap: 1px; }
@@ -303,36 +303,35 @@ select { font-family: inherit; }
   background-image:
     linear-gradient(var(--border) 1px, transparent 1px),
     linear-gradient(90deg, var(--border) 1px, transparent 1px);
-  background-size: 54px 54px; opacity: 0.35; /* slightly reduced */
+  background-size: 54px 54px; opacity: 0.35;
   mask-image: radial-gradient(ellipse 55% 55% at 50% 35%, black, transparent);
 }
 
-/* FIX: Orbs significantly reduced */
 .orb {
   position: absolute; border-radius: 50%;
   filter: blur(100px); pointer-events: none;
 }
 .orb-1 {
   width: 500px; height: 360px;
-  background: radial-gradient(circle, rgba(0,201,167,0.06) 0%, transparent 70%); /* reduced from 0.10 */
+  background: radial-gradient(circle, rgba(0,201,167,0.06) 0%, transparent 70%);
   top: -100px; right: -60px;
 }
 .orb-2 {
   width: 380px; height: 360px;
-  background: radial-gradient(circle, rgba(245,166,35,0.04) 0%, transparent 70%); /* reduced from 0.06 */
+  background: radial-gradient(circle, rgba(245,166,35,0.04) 0%, transparent 70%);
   bottom: 80px; left: -100px;
 }
 
 .hero-inner {
-  max-width: 720px; /* slightly tightened for focus */
+  max-width: 720px;
   margin: 0 auto;
-  padding: 2.5rem var(--space-md) var(--space-xl); /* reduced top padding */
+  padding: 2.5rem var(--space-md) var(--space-xl);
   position: relative; z-index: 1;
 }
 
 .hero-eyebrow {
   display: inline-flex; align-items: center; gap: 8px;
-  font-size: 0.68rem; font-weight: 500; color: var(--text-muted); /* more muted */
+  font-size: 0.68rem; font-weight: 500; color: var(--text-muted);
   border: 1px solid var(--border);
   padding: 0.28rem 0.8rem; border-radius: var(--radius-full);
   margin-bottom: 1.75rem; letter-spacing: 0.03em;
@@ -344,12 +343,12 @@ select { font-family: inherit; }
 }
 @keyframes pulseGreen {
   0%,100% { box-shadow: 0 0 4px rgba(34,197,94,0.5); }
-  50% { box-shadow: 0 0 9px rgba(34,197,94,0.8), 0 0 16px rgba(34,197,94,0.2); } /* reduced */
+  50% { box-shadow: 0 0 9px rgba(34,197,94,0.8), 0 0 16px rgba(34,197,94,0.2); }
 }
 
 .hero-name {
   font-family: var(--font-display);
-  font-size: clamp(3.8rem, 8vw, 7rem); /* slightly tighter max */
+  font-size: clamp(3.8rem, 8vw, 7rem);
   font-weight: 900; line-height: 0.92;
   letter-spacing: -0.05em; color: var(--text-primary);
   margin-bottom: 1.1rem;
@@ -362,7 +361,7 @@ select { font-family: inherit; }
 
 .hero-roles {
   display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;
-  font-size: 0.88rem; color: var(--text-muted); /* more muted — less clutter */
+  font-size: 0.88rem; color: var(--text-muted);
   margin-bottom: 1.5rem;
 }
 .role-fixed { color: var(--text-secondary); }
@@ -384,7 +383,7 @@ select { font-family: inherit; }
 
 .hero-ctas {
   display: flex; gap: 0.75rem; flex-wrap: wrap;
-  margin-bottom: 2.25rem; /* tighter */
+  margin-bottom: 2.25rem;
 }
 
 /* Live signals */
@@ -397,11 +396,11 @@ select { font-family: inherit; }
 .signal-label { font-weight: 600; color: var(--text-muted); letter-spacing: 0.04em; }
 .signal-item { display: flex; align-items: center; gap: 5px; color: var(--text-secondary); }
 .signal-dot {
-  width: 5px; height: 5px; border-radius: 50%; flex-shrink: 0; /* smaller dot */
+  width: 5px; height: 5px; border-radius: 50%; flex-shrink: 0;
 }
 .signal-dot.active {
   background: #22c55e;
-  box-shadow: 0 0 5px rgba(34,197,94,0.5); /* reduced */
+  box-shadow: 0 0 5px rgba(34,197,94,0.5);
   animation: pulseGreen 2.2s infinite;
 }
 .signal-dot.dim { background: var(--text-muted); }
@@ -440,7 +439,7 @@ select { font-family: inherit; }
 
 .build-card--featured {
   border-color: var(--border-accent);
-  box-shadow: var(--shadow-glow); /* reduced globally */
+  box-shadow: var(--shadow-glow);
 }
 .build-card--featured:hover { border-color: var(--accent); }
 
@@ -495,7 +494,6 @@ select { font-family: inherit; }
   font-size: 0.65rem; font-weight: 700; padding: 0.2rem 0.6rem;
   border-radius: var(--radius-full); border: 1px solid transparent;
   letter-spacing: 0.01em;
-  /* No box-shadow — sharp clean pill, no glow spread */
 }
 .build-tech span:nth-child(1) { color: #93c5fd; background: rgba(59,130,246,0.12); border-color: rgba(59,130,246,0.28); }
 .build-tech span:nth-child(2) { color: #6ee7b7; background: rgba(16,185,129,0.12); border-color: rgba(16,185,129,0.28); }
@@ -503,15 +501,14 @@ select { font-family: inherit; }
 .build-tech span:nth-child(4) { color: #fdba74; background: rgba(249,115,22,0.12); border-color: rgba(249,115,22,0.28); }
 
 .build-tags-row { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.5rem; }
-/* Colourful pills for VidyaForge card tags */
 .build-tag {
   font-size: 0.65rem; font-weight: 700; padding: 0.2rem 0.6rem;
   border-radius: var(--radius-full); border: 1px solid transparent;
   letter-spacing: 0.01em;
 }
-.build-tag:nth-child(1) { color: #a78bfa; background: rgba(139,92,246,0.12); border-color: rgba(139,92,246,0.28); }  /* Studio — purple */
-.build-tag:nth-child(2) { color: #00c9a7; background: rgba(0,201,167,0.10); border-color: rgba(0,201,167,0.25); }     /* Founder — accent teal */
-.build-tag:nth-child(3) { color: #fbbf24; background: rgba(251,191,36,0.10); border-color: rgba(251,191,36,0.25); }   /* Build in Public — amber */
+.build-tag:nth-child(1) { color: #a78bfa; background: rgba(139,92,246,0.12); border-color: rgba(139,92,246,0.28); }
+.build-tag:nth-child(2) { color: #00c9a7; background: rgba(0,201,167,0.10); border-color: rgba(0,201,167,0.25); }
+.build-tag:nth-child(3) { color: #fbbf24; background: rgba(251,191,36,0.10); border-color: rgba(251,191,36,0.25); }
 .build-link {
   font-size: 0.78rem; color: var(--accent);
   font-weight: 500; transition: color var(--dur-fast);
@@ -545,14 +542,14 @@ select { font-family: inherit; }
 }
 .work-card:hover {
   border-color: var(--border-accent);
-  transform: translateY(-3px); /* reduced from -4px */
+  transform: translateY(-3px);
   box-shadow: var(--shadow-card);
 }
 .work-card:hover::after { transform: scaleX(1); }
 
 .work-card--featured {
   border-color: var(--border-accent);
-  background: linear-gradient(160deg, rgba(0,201,167,0.04), var(--bg-card)); /* slightly reduced */
+  background: linear-gradient(160deg, rgba(0,201,167,0.04), var(--bg-card));
 }
 .work-card--featured::after { transform: scaleX(1); }
 
@@ -584,7 +581,6 @@ select { font-family: inherit; }
 }
 [data-theme="light"] .work-tags li { background: rgba(0,0,0,0.04); border-color: rgba(0,0,0,0.08); }
 
-/* Work tag colors per card */
 .work-grid .work-card:nth-child(1) .work-tags li:nth-child(1) { color: #22d3ee; }
 .work-grid .work-card:nth-child(1) .work-tags li:nth-child(2) { color: #818cf8; }
 .work-grid .work-card:nth-child(1) .work-tags li:nth-child(3) { color: #c084fc; }
@@ -626,12 +622,11 @@ select { font-family: inherit; }
   padding: 0.4rem 0.85rem; border-radius: var(--radius-full);
   transition: all var(--dur-fast); margin-top: auto; align-self: flex-start;
 }
-.work-cta:hover { background: var(--whatsapp); color: #fff; box-shadow: 0 2px 10px var(--whatsapp-glow); transform: translateX(2px); }
+.work-cta:hover { background: var(--whatsapp); color: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.25); transform: translateX(2px); }
 
 [data-theme="dark"] .work-card { background: linear-gradient(145deg, #131c2b 0%, #111827 100%); border-color: rgba(255,255,255,0.06); }
 [data-theme="dark"] .work-card--featured { background: linear-gradient(145deg, rgba(0,201,167,0.06) 0%, #111827 100%); }
 
-/* Founder line — elevated, ownable */
 .work-founder-line {
   display: flex; align-items: center; justify-content: center;
   gap: 0.75rem;
@@ -676,7 +671,6 @@ select { font-family: inherit; }
 .proof-highlight { display: flex; align-items: center; gap: 0.7rem; font-size: 0.86rem; color: var(--text-secondary); }
 .ph-icon { color: var(--accent); font-size: 0.72rem; }
 
-/* Condensed timeline */
 .proof-timeline { margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid var(--border); }
 .pt-item {
   display: flex; gap: 1.1rem; margin-bottom: 1.5rem; position: relative;
@@ -685,7 +679,7 @@ select { font-family: inherit; }
 .pt-dot {
   width: 9px; height: 9px; border-radius: 50%;
   background: var(--accent); border: 2px solid var(--bg-secondary);
-  box-shadow: 0 0 6px var(--accent-glow); /* reduced */
+  box-shadow: 0 0 6px var(--accent-glow);
   flex-shrink: 0; margin-top: 4px;
 }
 .pt-content { flex: 1; }
@@ -700,7 +694,6 @@ select { font-family: inherit; }
 }
 .pt-desc { font-size: 0.82rem; font-weight: 300; color: var(--text-secondary); line-height: 1.65; }
 
-/* Proof right — facts */
 .proof-right { position: sticky; top: 7rem; }
 .proof-facts { display: flex; flex-direction: column; gap: 0.75rem; }
 .proof-fact {
@@ -783,7 +776,7 @@ select { font-family: inherit; }
 .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 5rem; align-items: start; }
 .contact-intro { font-size: 0.93rem; font-weight: 300; color: var(--text-secondary); line-height: 1.75; margin-bottom: 1.75rem; }
 
-/* WhatsApp CTA */
+/* FIXED: WhatsApp CTA — no green glow, hardcoded dark shadow */
 .whatsapp-cta {
   display: flex; align-items: center; gap: 1rem;
   background: #25d366; color: #ffffff; border-radius: var(--radius-md);
@@ -805,7 +798,6 @@ select { font-family: inherit; }
 .wca-sub { display: block; font-size: 0.75rem; opacity: 0.8; margin-top: 2px; }
 .wca-arrow { opacity: 0.7; flex-shrink: 0; }
 
-/* Contact Links */
 .contact-links { display: flex; flex-direction: column; gap: 0.6rem; }
 .contact-link {
   display: flex; align-items: center; gap: 0.9rem; color: var(--text-secondary);
@@ -822,7 +814,6 @@ select { font-family: inherit; }
 .cl-label { font-size: 0.63rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); }
 .cl-value { font-size: 0.86rem; color: var(--text-secondary); margin-top: 1px; }
 
-/* Contact Form */
 .contact-form { display: flex; flex-direction: column; gap: 0.9rem; }
 .cf-heading { font-family: var(--font-display); font-size: 0.92rem; font-weight: 800; color: var(--text-primary); margin-bottom: 0.2rem; }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
