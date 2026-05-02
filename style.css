@@ -783,17 +783,17 @@ select { font-family: inherit; }
 .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 5rem; align-items: start; }
 .contact-intro { font-size: 0.93rem; font-weight: 300; color: var(--text-secondary); line-height: 1.75; margin-bottom: 1.75rem; }
 
-/* FIX: WhatsApp big CTA — glow significantly reduced */
+/* FIX: WhatsApp big CTA — glow removed, plain dark shadow instead */
 .whatsapp-cta-big {
   display: flex; align-items: center; gap: 1rem;
   background: var(--whatsapp); color: #ffffff; border-radius: var(--radius-md);
   padding: 1.1rem 1.4rem; margin-bottom: 1.5rem;
   transition: all var(--dur-fast);
-  box-shadow: 0 8px 18px var(--whatsapp-glow); /* reduced from 0 4px 16px */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25); /* FIXED: was var(--whatsapp-glow) */
 }
 .whatsapp-cta-big:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px var(--whatsapp-glow); /* reduced */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.32); /* FIXED: was var(--whatsapp-glow) */
 }
 .wca-icon {
   width: 46px; height: 46px; background: rgba(255,255,255,0.15);
@@ -841,11 +841,12 @@ select { font-family: inherit; }
 .form-group input::placeholder, .form-group textarea::placeholder { color: var(--text-muted); }
 .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
   border-color: var(--accent);
-  box-shadow: 0 0 0 2px var(--accent-dim); /* reduced from 3px */
+  box-shadow: 0 0 0 2px var(--accent-dim);
 }
 .form-status { font-size: 0.81rem; padding: 0.65rem 0.9rem; border-radius: var(--radius-sm); display: none; }
 .form-status.success { display: block; background: rgba(34,197,94,0.07); color: #22c55e; border: 1px solid rgba(34,197,94,0.15); }
 .form-status.error   { display: block; background: rgba(239,68,68,0.07); color: #ef4444; border: 1px solid rgba(239,68,68,0.15); }
+
 
 /* ----------------------------------------------------------------
    FOOTER
