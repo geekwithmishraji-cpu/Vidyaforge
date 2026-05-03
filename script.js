@@ -73,7 +73,7 @@ navLinks?.querySelectorAll('.nav-link').forEach(l => {
    UPDATE: edit the TYPING_WORDS array to change what cycles through
 ---------------------------------------------------------------- */
 const typingTarget = document.getElementById('typingTarget');
-const TYPING_WORDS = ['AI Builder', 'Product Architect', 'Systems Thinker', 'Digital Strategist'];
+const TYPING_WORDS = ['System Builder', 'Product Architect', 'Scale Thinker', 'Digital Strategist'];
 let si = 0, ci = 0, deleting = false;
 
 function typeLoop() {
