@@ -46,7 +46,8 @@
 
   --whatsapp:     #25d366;
   --whatsapp-dim: rgba(37,211,102,0.10);
-  --whatsapp-glow:rgba(37,211,102,0.22);
+  /* FIXED: reduced glow in dark mode */
+  --whatsapp-glow: rgba(37,211,102,0.12);
 
   --amber:        #f5a623;
   --amber-dim:    rgba(245,166,35,0.12);
@@ -240,6 +241,10 @@ select { font-family: inherit; }
 
 .nav-actions { display: flex; align-items: center; gap: 0.65rem; }
 
+/* ----------------------------------------------------------------
+   WHATSAPP NAV BUTTON
+   FIXED: No outer neon glow in dark mode — flat solid green
+---------------------------------------------------------------- */
 .btn-whatsapp-nav {
   display: flex; align-items: center; gap: 6px;
   font-size: 0.78rem; font-weight: 600;
@@ -248,11 +253,19 @@ select { font-family: inherit; }
   padding: 0.38rem 0.9rem;
   border-radius: var(--radius-full);
   transition: all var(--dur-fast);
-  box-shadow: 0 2px 12px var(--whatsapp-glow);
+  /* flat shadow only, no blur glow */
+  box-shadow: 0 1px 4px rgba(0,0,0,0.25);
 }
 .btn-whatsapp-nav:hover {
   transform: translateY(-1px);
-  box-shadow: 0 4px 18px var(--whatsapp-glow);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+}
+/* Dark mode: completely flat, no glow */
+[data-theme="dark"] .btn-whatsapp-nav {
+  box-shadow: none;
+}
+[data-theme="dark"] .btn-whatsapp-nav:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
 }
 
 .theme-toggle {
@@ -315,6 +328,10 @@ select { font-family: inherit; }
 }
 .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
 
+/* ----------------------------------------------------------------
+   WHATSAPP HERO BUTTON
+   FIXED: flat solid in dark mode, no neon glow
+---------------------------------------------------------------- */
 .btn-whatsapp {
   display: inline-flex;
   align-items: center;
@@ -329,15 +346,24 @@ select { font-family: inherit; }
   font-size: 0.9rem;
   text-decoration: none;
   transition: all var(--dur-fast);
-  box-shadow: 0 4px 16px var(--whatsapp-glow);
+  /* subtle shadow, not glowing */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
   white-space: nowrap;
   flex-direction: row;
 }
 .btn-whatsapp:hover {
   background: #20c05c;
-  box-shadow: 0 6px 22px var(--whatsapp-glow);
   transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.25);
 }
+/* Dark mode: completely flat */
+[data-theme="dark"] .btn-whatsapp {
+  box-shadow: none;
+}
+[data-theme="dark"] .btn-whatsapp:hover {
+  box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+}
+
 .btn-whatsapp-inner {
   display: flex;
   flex-direction: column;
@@ -355,7 +381,6 @@ select { font-family: inherit; }
   opacity: 0.82;
   line-height: 1.2;
 }
-
 
 .btn-sm { font-size: 0.78rem; padding: 0.44rem 0.95rem; }
 .btn-full { width: 100%; justify-content: center; }
@@ -424,6 +449,7 @@ select { font-family: inherit; }
   padding-right: 0.5rem;
 }
 
+/* Badge */
 .hero-tagline {
   font-size: 0.75rem;
   font-weight: 500;
@@ -459,6 +485,7 @@ select { font-family: inherit; }
   letter-spacing: 0.01em;
 }
 
+/* Main statement — longer version */
 .hero-statement {
   font-size: 1.15rem;
   font-weight: 300;
@@ -468,6 +495,7 @@ select { font-family: inherit; }
   margin-bottom: 0.75rem;
 }
 
+/* Sub-line */
 .hero-microcopy {
   font-size: 0.83rem;
   font-weight: 400;
@@ -578,6 +606,7 @@ select { font-family: inherit; }
   text-transform: uppercase;
   color: var(--accent);
 }
+/* Accent dot on right of header */
 .sp-dot-live {
   width: 7px; height: 7px;
   background: #22c55e;
@@ -596,6 +625,7 @@ select { font-family: inherit; }
 }
 .sp-card:hover { border-color: var(--border-accent); }
 
+/* VendorMate featured: keep glow/highlight */
 .sp-card--featured {
   background: rgba(0,201,167,0.04);
   border-color: rgba(0,201,167,0.18);
@@ -603,10 +633,11 @@ select { font-family: inherit; }
 }
 [data-theme="dark"] .sp-card--featured {
   background: rgba(0,201,167,0.06);
+  box-shadow: 0 0 20px rgba(0,201,167,0.09), 0 0 0 1px rgba(0,201,167,0.14);
 }
 
 .sp-card--muted {
-  opacity: 0.72;
+  opacity: 0.78;
 }
 .sp-card--muted:hover { opacity: 1; }
 
@@ -627,7 +658,7 @@ select { font-family: inherit; }
   font-size: 0.75rem;
   font-weight: 300;
   color: var(--text-muted);
-  margin-bottom: 0.45rem;
+  margin-bottom: 0.5rem;
 }
 .sp-link {
   font-size: 0.7rem;
@@ -675,6 +706,59 @@ select { font-family: inherit; }
 }
 .sp-status.select .status-dot { background: var(--text-muted); }
 
+/* ----------------------------------------------------------------
+   GYANSYNC PILLS — colored text, grey/subtle background
+   Founder, Agency, Web Dev (blue), Marketing (purple), Automation (green)
+---------------------------------------------------------------- */
+.sp-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.5rem;
+}
+
+/* Base pill — grey background, colored text */
+.sp-pill {
+  font-size: 0.62rem;
+  font-weight: 600;
+  padding: 0.18rem 0.5rem;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(148,163,184,0.18);
+  background: rgba(148,163,184,0.08);
+  letter-spacing: 0.02em;
+}
+
+/* Founder pill */
+.sp-pill--founder {
+  color: #94a3b8;
+  border-color: rgba(148,163,184,0.2);
+}
+/* Agency pill */
+.sp-pill--agency {
+  color: #94a3b8;
+  border-color: rgba(148,163,184,0.2);
+}
+/* Web Dev — blue text */
+.sp-pill--webdev {
+  color: #67e8f9;
+  border-color: rgba(6,182,212,0.22);
+}
+/* Marketing — purple text */
+.sp-pill--marketing {
+  color: #c4b5fd;
+  border-color: rgba(167,139,250,0.22);
+}
+/* Automation — green/teal text */
+.sp-pill--automation {
+  color: #5eead4;
+  border-color: rgba(0,201,167,0.22);
+}
+
+/* Light mode adjustments */
+[data-theme="light"] .sp-pill--webdev   { color: #0e7490; border-color: rgba(6,182,212,0.25); }
+[data-theme="light"] .sp-pill--marketing { color: #6d28d9; border-color: rgba(167,139,250,0.25); }
+[data-theme="light"] .sp-pill--automation { color: #0f766e; border-color: rgba(0,201,167,0.25); }
+
 /* Panel footer */
 .sp-footer {
   font-size: 0.7rem;
@@ -707,7 +791,7 @@ select { font-family: inherit; }
 }
 
 /* ----------------------------------------------------------------
-   SERVICES
+   SERVICES / SYSTEMS
 ---------------------------------------------------------------- */
 .services { background: var(--bg-secondary); }
 
@@ -978,7 +1062,7 @@ select { font-family: inherit; }
 .timeline-achievements li::before { content: '→'; position: absolute; left: 0; color: var(--accent); font-size: 0.65rem; }
 
 /* ----------------------------------------------------------------
-   INSIGHTS / BLOG
+   INSIGHTS / BLOG / JOURNAL
 ---------------------------------------------------------------- */
 .insights-header {
   display: flex; justify-content: space-between; align-items: flex-end;
@@ -1065,7 +1149,9 @@ select { font-family: inherit; }
   margin-bottom: 1.75rem;
 }
 
-/* Big WhatsApp CTA */
+/* Big WhatsApp CTA
+   FIXED: flat solid in dark mode — no neon glow
+*/
 .whatsapp-cta-big {
   display: flex; align-items: center; gap: 1rem;
   background: var(--whatsapp);
@@ -1073,12 +1159,21 @@ select { font-family: inherit; }
   padding: 1.1rem 1.4rem;
   margin-bottom: 1.5rem;
   transition: all var(--dur-fast);
-  box-shadow: 0 4px 18px var(--whatsapp-glow);
+  /* subtle shadow only */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.18);
 }
 .whatsapp-cta-big:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 28px var(--whatsapp-glow);
+  box-shadow: 0 5px 18px rgba(0,0,0,0.25);
 }
+/* Dark mode: flat, no glow at all */
+[data-theme="dark"] .whatsapp-cta-big {
+  box-shadow: none;
+}
+[data-theme="dark"] .whatsapp-cta-big:hover {
+  box-shadow: 0 3px 12px rgba(0,0,0,0.45);
+}
+
 .wca-icon {
   width: 46px; height: 46px;
   background: rgba(255,255,255,0.15);
@@ -1248,7 +1343,8 @@ select { font-family: inherit; }
 }
 
 /* ----------------------------------------------------------------
-   COLORFUL PILLS — base reset then per-position color
+   COLORFUL PILLS — grey background, colored text only
+   Applies to venture-tech and service-tags
 ---------------------------------------------------------------- */
 .venture-tech span,
 .service-tags li,
@@ -1259,48 +1355,45 @@ select { font-family: inherit; }
   font-weight: 600;
   padding: 0.22rem 0.6rem;
   border-radius: var(--radius-full);
+  /* grey background always */
   border: 1px solid rgba(148,163,184,0.18);
+  background: rgba(148,163,184,0.07);
   letter-spacing: 0.02em;
+  /* default color — overridden per card below */
   color: #94a3b8;
-  background: rgba(148,163,184,0.08);
 }
 
-/* VendorMate: React · Node.js · PostgreSQL · AWS */
+/* VendorMate pills — colored text, grey bg */
 .venture-card--featured .venture-tech span:nth-child(1) {
-  color: #93c5fd; background: rgba(59,130,246,0.12); border-color: rgba(59,130,246,0.25);
+  color: #93c5fd; /* blue */
 }
 .venture-card--featured .venture-tech span:nth-child(2) {
-  color: #6ee7b7; background: rgba(16,185,129,0.12); border-color: rgba(16,185,129,0.25);
+  color: #6ee7b7; /* green */
 }
 .venture-card--featured .venture-tech span:nth-child(3) {
-  color: #fcd34d; background: rgba(245,158,11,0.12); border-color: rgba(245,158,11,0.25);
+  color: #fcd34d; /* yellow */
 }
 .venture-card--featured .venture-tech span:nth-child(4) {
-  color: #fdba74; background: rgba(249,115,22,0.12); border-color: rgba(249,115,22,0.25);
+  color: #fdba74; /* orange */
 }
 
-/* GyanSync: Web Dev · Marketing · Automation */
+/* GyanSync venture pills — colored text, grey bg */
 .venture-card:not(.venture-card--featured) .venture-tech span:nth-child(1) {
-  color: #67e8f9; background: rgba(6,182,212,0.12); border-color: rgba(6,182,212,0.25);
+  color: #67e8f9; /* cyan — Web Dev */
 }
 .venture-card:not(.venture-card--featured) .venture-tech span:nth-child(2) {
-  color: #c4b5fd; background: rgba(167,139,250,0.12); border-color: rgba(167,139,250,0.25);
+  color: #c4b5fd; /* purple — Marketing */
 }
 .venture-card:not(.venture-card--featured) .venture-tech span:nth-child(3) {
-  color: #5eead4; background: rgba(0,201,167,0.12); border-color: rgba(0,201,167,0.25);
+  color: #5eead4; /* teal — Automation */
 }
 
 /* ----------------------------------------------------------------
-   SERVICE PILLS — uniform glass background, colored text only
-   Works in both dark and light mode
+   SERVICE PILLS — glass grey bg, colored text only
 ---------------------------------------------------------------- */
-
-/* Glass base for ALL service pills — overrides the colored backgrounds */
 .services-grid .service-tags li {
-  background: rgba(255,255,255,0.06);
-  border-color: rgba(255,255,255,0.10);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  background: rgba(148,163,184,0.07);
+  border-color: rgba(148,163,184,0.16);
 }
 [data-theme="light"] .services-grid .service-tags li {
   background: rgba(0,0,0,0.04);
@@ -1331,7 +1424,7 @@ select { font-family: inherit; }
 .services-grid .service-card:nth-child(4) .service-tags li:nth-child(3) { color: #34d399; }
 .services-grid .service-card:nth-child(4) .service-tags li:nth-child(4) { color: #f472b6; }
 
-/* Light mode — same glass base, slightly darker text for contrast */
+/* Light mode — same grey bg, slightly darker text for contrast */
 [data-theme="light"] .services-grid .service-card:nth-child(1) .service-tags li:nth-child(1) { color: #0891b2; }
 [data-theme="light"] .services-grid .service-card:nth-child(1) .service-tags li:nth-child(2) { color: #4f46e5; }
 [data-theme="light"] .services-grid .service-card:nth-child(1) .service-tags li:nth-child(3) { color: #7c3aed; }
@@ -1352,27 +1445,11 @@ select { font-family: inherit; }
 [data-theme="light"] .services-grid .service-card:nth-child(4) .service-tags li:nth-child(3) { color: #059669; }
 [data-theme="light"] .services-grid .service-card:nth-child(4) .service-tags li:nth-child(4) { color: #db2777; }
 
-/* ----------------------------------------------------------------
-   VENTURE PILLS — light mode (keep colored bg, darken text)
----------------------------------------------------------------- */
-[data-theme="light"] .venture-card--featured .venture-tech span:nth-child(1) {
-  color: #1d4ed8; background: rgba(59,130,246,0.08); border-color: rgba(59,130,246,0.22);
-}
-[data-theme="light"] .venture-card--featured .venture-tech span:nth-child(2) {
-  color: #047857; background: rgba(16,185,129,0.08); border-color: rgba(16,185,129,0.22);
-}
-[data-theme="light"] .venture-card--featured .venture-tech span:nth-child(3) {
-  color: #b45309; background: rgba(245,158,11,0.08); border-color: rgba(245,158,11,0.22);
-}
-[data-theme="light"] .venture-card--featured .venture-tech span:nth-child(4) {
-  color: #c2410c; background: rgba(249,115,22,0.08); border-color: rgba(249,115,22,0.22);
-}
-[data-theme="light"] .venture-card:not(.venture-card--featured) .venture-tech span:nth-child(1) {
-  color: #0e7490; background: rgba(6,182,212,0.08); border-color: rgba(6,182,212,0.22);
-}
-[data-theme="light"] .venture-card:not(.venture-card--featured) .venture-tech span:nth-child(2) {
-  color: #6d28d9; background: rgba(167,139,250,0.08); border-color: rgba(167,139,250,0.22);
-}
-[data-theme="light"] .venture-card:not(.venture-card--featured) .venture-tech span:nth-child(3) {
-  color: #0f766e; background: rgba(0,201,167,0.08); border-color: rgba(0,201,167,0.22);
-}
+/* Light mode venture pills — darker text, same subtle grey bg */
+[data-theme="light"] .venture-card--featured .venture-tech span:nth-child(1) { color: #1d4ed8; }
+[data-theme="light"] .venture-card--featured .venture-tech span:nth-child(2) { color: #047857; }
+[data-theme="light"] .venture-card--featured .venture-tech span:nth-child(3) { color: #b45309; }
+[data-theme="light"] .venture-card--featured .venture-tech span:nth-child(4) { color: #c2410c; }
+[data-theme="light"] .venture-card:not(.venture-card--featured) .venture-tech span:nth-child(1) { color: #0e7490; }
+[data-theme="light"] .venture-card:not(.venture-card--featured) .venture-tech span:nth-child(2) { color: #6d28d9; }
+[data-theme="light"] .venture-card:not(.venture-card--featured) .venture-tech span:nth-child(3) { color: #0f766e; }
